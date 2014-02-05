@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Assignment" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignmentStudent" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssignmentStudent" inverseName="assignment" inverseEntity="AssignmentStudent" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assignment" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <entity name="AssignmentStudent" syncable="YES">
+        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Assignment" inverseName="assignmentStudent" inverseEntity="Assignment" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="assignmentStudent" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Course" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignment" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assignment" inverseName="course" inverseEntity="Assignment" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="course" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" syncable="YES">
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <relationship name="assignmentStudent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssignmentStudent" inverseName="student" inverseEntity="AssignmentStudent" syncable="YES"/>
+        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="student" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Course" positionX="207" positionY="-369" width="128" height="88"/>
+        <element name="Assignment" positionX="324" positionY="-211" width="128" height="103"/>
+        <element name="Student" positionX="79" positionY="-207" width="128" height="88"/>
+        <element name="AssignmentStudent" positionX="207" positionY="-9" width="128" height="88"/>
     </elements>
 </model>

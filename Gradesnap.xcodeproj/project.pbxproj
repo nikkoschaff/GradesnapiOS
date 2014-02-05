@@ -16,8 +16,6 @@
 		717B4DF618A28BD00069E770 /* GSPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DF518A28BD00069E770 /* GSPAppDelegate.m */; };
 		717B4DF918A28BD00069E770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717B4DF718A28BD00069E770 /* Main.storyboard */; };
 		717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */; };
-		717B4DFF18A28BD00069E770 /* GSPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DFE18A28BD00069E770 /* GSPMasterViewController.m */; };
-		717B4E0218A28BD00069E770 /* GSPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E0118A28BD00069E770 /* GSPDetailViewController.m */; };
 		717B4E0418A28BD00069E770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E0318A28BD00069E770 /* Images.xcassets */; };
 		717B4E0B18A28BD00069E770 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4E0A18A28BD00069E770 /* XCTest.framework */; };
 		717B4E0C18A28BD00069E770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE318A28BD00069E770 /* Foundation.framework */; };
@@ -51,10 +49,6 @@
 		717B4DF518A28BD00069E770 /* GSPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSPAppDelegate.m; sourceTree = "<group>"; };
 		717B4DF818A28BD00069E770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		717B4DFB18A28BD00069E770 /* Gradesnap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gradesnap.xcdatamodel; sourceTree = "<group>"; };
-		717B4DFD18A28BD00069E770 /* GSPMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPMasterViewController.h; sourceTree = "<group>"; };
-		717B4DFE18A28BD00069E770 /* GSPMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSPMasterViewController.m; sourceTree = "<group>"; };
-		717B4E0018A28BD00069E770 /* GSPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPDetailViewController.h; sourceTree = "<group>"; };
-		717B4E0118A28BD00069E770 /* GSPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSPDetailViewController.m; sourceTree = "<group>"; };
 		717B4E0318A28BD00069E770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		717B4E0918A28BD00069E770 /* GradesnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradesnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B4E0A18A28BD00069E770 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -126,10 +120,6 @@
 				717B4DF418A28BD00069E770 /* GSPAppDelegate.h */,
 				717B4DF518A28BD00069E770 /* GSPAppDelegate.m */,
 				717B4DF718A28BD00069E770 /* Main.storyboard */,
-				717B4DFD18A28BD00069E770 /* GSPMasterViewController.h */,
-				717B4DFE18A28BD00069E770 /* GSPMasterViewController.m */,
-				717B4E0018A28BD00069E770 /* GSPDetailViewController.h */,
-				717B4E0118A28BD00069E770 /* GSPDetailViewController.m */,
 				717B4E0318A28BD00069E770 /* Images.xcassets */,
 				717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */,
 				717B4DEC18A28BD00069E770 /* Supporting Files */,
@@ -265,8 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				717B4DF218A28BD00069E770 /* main.m in Sources */,
-				717B4DFF18A28BD00069E770 /* GSPMasterViewController.m in Sources */,
-				717B4E0218A28BD00069E770 /* GSPDetailViewController.m in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,
 				717B4DF618A28BD00069E770 /* GSPAppDelegate.m in Sources */,
 			);
