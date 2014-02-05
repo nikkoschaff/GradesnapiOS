@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Assignment" syncable="YES">
+    <entity name="Assignment" representedClassName="Assignment" syncable="YES">
+        <attribute name="answers" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="assignmentStudent" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssignmentStudent" inverseName="assignment" inverseEntity="AssignmentStudent" syncable="YES"/>
-        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assignment" inverseEntity="Course" syncable="YES"/>
+        <relationship name="assignmentStudents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssignmentStudent" inverseName="assignment" inverseEntity="AssignmentStudent" syncable="YES"/>
+        <relationship name="courses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assignments" inverseEntity="Course" syncable="YES"/>
     </entity>
-    <entity name="AssignmentStudent" syncable="YES">
-        <attribute name="attribute" optional="YES" syncable="YES"/>
-        <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Assignment" inverseName="assignmentStudent" inverseEntity="Assignment" syncable="YES"/>
-        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="assignmentStudent" inverseEntity="Student" syncable="YES"/>
+    <entity name="AssignmentStudent" representedClassName="AssignmentStudent" syncable="YES">
+        <attribute name="answers" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="grade" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Assignment" inverseName="assignmentStudents" inverseEntity="Assignment" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="assignmentStudents" inverseEntity="Student" syncable="YES"/>
     </entity>
-    <entity name="Course" syncable="YES">
+    <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="assignment" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assignment" inverseName="course" inverseEntity="Assignment" syncable="YES"/>
-        <relationship name="student" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="course" inverseEntity="Student" syncable="YES"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assignment" inverseName="courses" inverseEntity="Assignment" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="courses" inverseEntity="Student" syncable="YES"/>
     </entity>
-    <entity name="Student" syncable="YES">
-        <attribute name="name" optional="YES" syncable="YES"/>
-        <relationship name="assignmentStudent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssignmentStudent" inverseName="student" inverseEntity="AssignmentStudent" syncable="YES"/>
-        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="student" inverseEntity="Course" syncable="YES"/>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignmentStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssignmentStudent" inverseName="student" inverseEntity="AssignmentStudent" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="students" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
         <element name="Course" positionX="207" positionY="-369" width="128" height="88"/>
-        <element name="Assignment" positionX="324" positionY="-211" width="128" height="103"/>
-        <element name="Student" positionX="79" positionY="-207" width="128" height="88"/>
-        <element name="AssignmentStudent" positionX="207" positionY="-9" width="128" height="88"/>
+        <element name="Assignment" positionX="313" positionY="-211" width="128" height="118"/>
+        <element name="Student" positionX="106" positionY="-207" width="128" height="88"/>
+        <element name="AssignmentStudent" positionX="205" positionY="-7" width="128" height="103"/>
     </elements>
 </model>

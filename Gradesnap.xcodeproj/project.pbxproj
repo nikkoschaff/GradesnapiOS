@@ -23,6 +23,10 @@
 		717B4E0E18A28BD00069E770 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE918A28BD00069E770 /* CoreData.framework */; };
 		717B4E1618A28BD00069E770 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E1418A28BD00069E770 /* InfoPlist.strings */; };
 		717B4E1818A28BD00069E770 /* GradesnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E1718A28BD00069E770 /* GradesnapTests.m */; };
+		717B4E2318A298D30069E770 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2218A298D30069E770 /* Course.m */; };
+		717B4E2618A298E20069E770 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2518A298E20069E770 /* Student.m */; };
+		717B4E2918A2990F0069E770 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2818A2990F0069E770 /* Assignment.m */; };
+		717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2B18A299AD0069E770 /* AssignmentStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,14 @@
 		717B4E1318A28BD00069E770 /* GradesnapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GradesnapTests-Info.plist"; sourceTree = "<group>"; };
 		717B4E1518A28BD00069E770 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		717B4E1718A28BD00069E770 /* GradesnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradesnapTests.m; sourceTree = "<group>"; };
+		717B4E2118A298D30069E770 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		717B4E2218A298D30069E770 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		717B4E2418A298E20069E770 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		717B4E2518A298E20069E770 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		717B4E2718A2990F0069E770 /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
+		717B4E2818A2990F0069E770 /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
+		717B4E2A18A299AD0069E770 /* AssignmentStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentStudent.h; sourceTree = "<group>"; };
+		717B4E2B18A299AD0069E770 /* AssignmentStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,14 @@
 				717B4DF718A28BD00069E770 /* Main.storyboard */,
 				717B4E0318A28BD00069E770 /* Images.xcassets */,
 				717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */,
+				717B4E2A18A299AD0069E770 /* AssignmentStudent.h */,
+				717B4E2B18A299AD0069E770 /* AssignmentStudent.m */,
+				717B4E2718A2990F0069E770 /* Assignment.h */,
+				717B4E2818A2990F0069E770 /* Assignment.m */,
+				717B4E2418A298E20069E770 /* Student.h */,
+				717B4E2518A298E20069E770 /* Student.m */,
+				717B4E2118A298D30069E770 /* Course.h */,
+				717B4E2218A298D30069E770 /* Course.m */,
 				717B4DEC18A28BD00069E770 /* Supporting Files */,
 			);
 			path = Gradesnap;
@@ -254,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */,
+				717B4E2318A298D30069E770 /* Course.m in Sources */,
 				717B4DF218A28BD00069E770 /* main.m in Sources */,
+				717B4E2618A298E20069E770 /* Student.m in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,
+				717B4E2918A2990F0069E770 /* Assignment.m in Sources */,
 				717B4DF618A28BD00069E770 /* GSPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
