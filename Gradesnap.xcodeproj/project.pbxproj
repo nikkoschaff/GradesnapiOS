@@ -27,6 +27,8 @@
 		717B4E2618A298E20069E770 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2518A298E20069E770 /* Student.m */; };
 		717B4E2918A2990F0069E770 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2818A2990F0069E770 /* Assignment.m */; };
 		717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2B18A299AD0069E770 /* AssignmentStudent.m */; };
+		717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */; };
+		717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		717B4E2818A2990F0069E770 /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
 		717B4E2A18A299AD0069E770 /* AssignmentStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentStudent.h; sourceTree = "<group>"; };
 		717B4E2B18A299AD0069E770 /* AssignmentStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentStudent.m; sourceTree = "<group>"; };
+		717B4E2D18A29B1C0069E770 /* GSPMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPMasterViewController.h; sourceTree = "<group>"; };
+		717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPMasterViewController.m; sourceTree = "<group>"; };
+		717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewCourseViewController.h; sourceTree = "<group>"; };
+		717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewCourseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,10 @@
 				717B4DF418A28BD00069E770 /* GSPAppDelegate.h */,
 				717B4DF518A28BD00069E770 /* GSPAppDelegate.m */,
 				717B4DF718A28BD00069E770 /* Main.storyboard */,
+				717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */,
+				717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */,
+				717B4E2D18A29B1C0069E770 /* GSPMasterViewController.h */,
+				717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */,
 				717B4E0318A28BD00069E770 /* Images.xcassets */,
 				717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */,
 				717B4E2A18A299AD0069E770 /* AssignmentStudent.h */,
@@ -275,7 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */,
+				717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */,
 				717B4E2318A298D30069E770 /* Course.m in Sources */,
+				717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */,
 				717B4DF218A28BD00069E770 /* main.m in Sources */,
 				717B4E2618A298E20069E770 /* Student.m in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,

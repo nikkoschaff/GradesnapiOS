@@ -12,7 +12,7 @@
 @implementation Course
 
 @dynamic name;
-@dynamic student;
-@dynamic assignment;
+@dynamic students;
+@dynamic assignments;
 
 @end
