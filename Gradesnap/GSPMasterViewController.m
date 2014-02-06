@@ -35,12 +35,17 @@
 {
     [super viewDidLoad];
     
-    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:context];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     NSError *error;
-    self.courses = (NSMutableArray*)[context executeFetchRequest:fetchRequest error:&error];
+    self.courses = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
+    
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Error loading courses: %@", [error localizedDescription]);
+    }
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +63,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [courses count];
+    return [self.courses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,7 +71,6 @@
     static NSString *CellIdentifier = @"ListCourseCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
     Course *course = [courses objectAtIndex:indexPath.row];
     cell.textLabel.text = course.name;
     
@@ -84,15 +88,15 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        [self.managedObjectContext deleteObject:[self.courses objectAtIndex:[indexPath indexAtPosition:1]]];
+        [self.managedObjectContext save:nil];
+        
+        [self.courses removeObjectAtIndex:[indexPath indexAtPosition:1]];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
- 
 
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
@@ -125,12 +129,7 @@
     
     if (newCourse != nil)
     {
-        NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
-        NSFetchRequest *fetchRequest = [NSFetchRequest new];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:context];
-        [fetchRequest setEntity:entity];
-        NSError *error;
-        self.courses = (NSMutableArray*)[context executeFetchRequest:fetchRequest error:&error];
+        [self.courses addObject:newCourse];
         [self.tableView reloadData];
     }
 }

@@ -46,7 +46,7 @@
         
         NSError *error;
         if (![context save:&error]) {
-            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+            NSLog(@"Error saving new course: %@", [error localizedDescription]);
         }
 
         self.course = course;
