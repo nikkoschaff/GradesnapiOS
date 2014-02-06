@@ -48,14 +48,12 @@
 
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // TODO set course for studentsViewController
-    
     if (sender == self.studentsButton)
     {
         NSLog(@"stuentsbutton");
         [(GSPStudentsViewController*)[(UINavigationController*)[segue destinationViewController] topViewController] setCourse:self.course];
     }
-        
+    // TODO add assignments
 }
 
 @end

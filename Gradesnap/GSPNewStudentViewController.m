@@ -51,6 +51,7 @@
                           insertNewObjectForEntityForName:@"Student"
                           inManagedObjectContext:context];
         student.name = self.textField.text;
+        student.courses = [NSSet setWithObject:self.course];
         
         // TODO set student/course relationships
         

@@ -16,17 +16,17 @@
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assignment" inverseName="courses" inverseEntity="Assignment" syncable="YES"/>
-        <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="courses" inverseEntity="Student" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="course" inverseEntity="Student" syncable="YES"/>
     </entity>
     <entity name="Student" representedClassName="Student" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="assignmentStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssignmentStudent" inverseName="student" inverseEntity="AssignmentStudent" syncable="YES"/>
-        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="students" inverseEntity="Course" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="students" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Course" positionX="207" positionY="-369" width="128" height="88"/>
         <element name="Assignment" positionX="313" positionY="-211" width="128" height="118"/>
-        <element name="Student" positionX="106" positionY="-207" width="128" height="88"/>
         <element name="AssignmentStudent" positionX="205" positionY="-7" width="128" height="103"/>
+        <element name="Course" positionX="207" positionY="-369" width="128" height="88"/>
+        <element name="Student" positionX="106" positionY="-207" width="128" height="88"/>
     </elements>
 </model>
