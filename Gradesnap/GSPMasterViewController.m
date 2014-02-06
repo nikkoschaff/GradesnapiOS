@@ -31,31 +31,16 @@
     return self;
 }
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue
-{
-    GSPNewCourseViewController *source = [segue sourceViewController];
-    Course *newCourse = source.course;
-    
-    if (newCourse != nil)
-    {
-        [self.courses addObject:newCourse];
-        [self.tableView reloadData];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.courses = [NSMutableArray new];
     
-    // TODO load courses from DB
-//    NSFetchRequest *fetchRequest = [NSFetchRequest new];
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:managedObjectContext];
-//    [fetchRequest setEntity:entity];
-//    NSError *error;
-//    self.failedBankInfos = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-
-    
+    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.courses = (NSMutableArray*)[context executeFetchRequest:fetchRequest error:&error];
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,23 +93,21 @@
 }
 
  
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
 }
-*/
 
-/*
+
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -134,6 +117,24 @@
     // Pass the selected object to the new view controller.
 }
 
- */
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue
+{
+    GSPNewCourseViewController *source = [segue sourceViewController];
+    Course *newCourse = source.course;
+    
+    if (newCourse != nil)
+    {
+        NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+        NSFetchRequest *fetchRequest = [NSFetchRequest new];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:context];
+        [fetchRequest setEntity:entity];
+        NSError *error;
+        self.courses = (NSMutableArray*)[context executeFetchRequest:fetchRequest error:&error];
+        [self.tableView reloadData];
+    }
+}
+
+
 
 @end

@@ -36,42 +36,20 @@
     if (sender != self.doneButton) return;
     
     if (self.textField.text.length > 0) {
-        self.course = [Course new];
-        self.course.name = self.textField.text;
         
-        // TODO save to DB
-//        NSManagedObjectContext *context = [self managedObjectContext];
-//        FailedBankInfo *failedBankInfo = [NSEntityDescription
-//                                          insertNewObjectForEntityForName:@"FailedBankInfo"
-//                                          inManagedObjectContext:context];
-//        failedBankInfo.name = @"Test Bank";
-//        failedBankInfo.city = @"Testville";
-//        failedBankInfo.state = @"Testland";
-//        FailedBankDetails *failedBankDetails = [NSEntityDescription
-//                                                insertNewObjectForEntityForName:@"FailedBankDetails"
-//                                                inManagedObjectContext:context];
-//        failedBankDetails.closeDate = [NSDate date];
-//        failedBankDetails.updateDate = [NSDate date];
-//        failedBankDetails.zip = [NSNumber numberWithInt:12345];
-//        failedBankDetails.info = failedBankInfo;
-//        failedBankInfo.details = failedBankDetails;
-//        NSError *error;
-//        if (![context save:&error]) {
-//            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-//        }
-//        
-//        
-//        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//        NSEntityDescription *entity = [NSEntityDescription
-//                                       entityForName:@"FailedBankInfo" inManagedObjectContext:context];
-//        [fetchRequest setEntity:entity];
-//        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-//        for (FailedBankInfo *info in fetchedObjects) {
-//            NSLog(@"Name: %@",info.name);
-//            FailedBankDetails *details = info.details;
-//            NSLog(@"Zip: %@", details.zip);
-//        }
+        NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+        
+        Course *course = [NSEntityDescription
+                          insertNewObjectForEntityForName:@"Course"
+                          inManagedObjectContext:context];
+        course.name = self.textField.text;
+        
+        NSError *error;
+        if (![context save:&error]) {
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        }
 
+        self.course = course;
     }
 }
 

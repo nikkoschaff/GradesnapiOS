@@ -85,12 +85,12 @@
                                     <navigationItem title="New Course" id="X2q-zH-p34">
                                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="rjD-hB-g4y">
                                             <connections>
-                                                <segue destination="Ld8-BK-Mp4" kind="unwind" unwindAction="unwindToList:" id="5yJ-mO-lCa"/>
+                                                <segue destination="Ld8-BK-Mp4" kind="unwind" unwindAction="unwindToList:" id="cda-Lp-ESP"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="6KC-gW-FJV">
                                             <connections>
-                                                <segue destination="Ld8-BK-Mp4" kind="unwind" unwindAction="unwindToList:" id="tqO-1N-M6m"/>
+                                                <segue destination="Ld8-BK-Mp4" kind="unwind" unwindAction="unwindToList:" id="U70-Jy-x4i"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

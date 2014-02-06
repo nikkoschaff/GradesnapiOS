@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CBB9975F-2354-4AB1-828F-3B6CBCC3AA50</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Gradesnap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</key>
+		<string>ssh://github.com/nikkoschaff/GradesnapiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Gradesnap.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/nikkoschaff/GradesnapiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Gradesnap</string>
+		</dict>
+	</array>
+</dict>
+</plist>
