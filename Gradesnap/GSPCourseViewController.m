@@ -28,17 +28,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    self.title = self.course.name;
     self.navTitle.title = self.course.name;
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)unwindToCourse:(UIStoryboardSegue *)segue
+{
+    
+}
+
+-(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // TODO set course for studentsViewController
 }
 
 @end

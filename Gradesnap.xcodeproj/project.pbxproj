@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */; };
+		7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */; };
+		7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */; };
 		717B4DE418A28BD00069E770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE318A28BD00069E770 /* Foundation.framework */; };
 		717B4DE618A28BD00069E770 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE518A28BD00069E770 /* CoreGraphics.framework */; };
 		717B4DE818A28BD00069E770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE718A28BD00069E770 /* UIKit.framework */; };
@@ -45,6 +47,10 @@
 /* Begin PBXFileReference section */
 		7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPCourseViewController.h; sourceTree = "<group>"; };
 		7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPCourseViewController.m; sourceTree = "<group>"; };
+		7103548018A3F9F800AAAE7E /* GSPStudentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPStudentsViewController.h; sourceTree = "<group>"; };
+		7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPStudentsViewController.m; sourceTree = "<group>"; };
+		7103548318A3FE6000AAAE7E /* GSPNewStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewStudentViewController.h; sourceTree = "<group>"; };
+		7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewStudentViewController.m; sourceTree = "<group>"; };
 		717B4DE018A28BD00069E770 /* Gradesnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gradesnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B4DE318A28BD00069E770 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		717B4DE518A28BD00069E770 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +164,10 @@
 				717B4DEC18A28BD00069E770 /* Supporting Files */,
 				7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */,
 				7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */,
+				7103548018A3F9F800AAAE7E /* GSPStudentsViewController.h */,
+				7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */,
+				7103548318A3FE6000AAAE7E /* GSPNewStudentViewController.h */,
+				7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */,
 			);
 			path = Gradesnap;
 			sourceTree = "<group>";
@@ -289,7 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */,
 				717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */,
+				7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */,
 				717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */,
 				717B4E2318A298D30069E770 /* Course.m in Sources */,
 				717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */,
