@@ -46,6 +46,8 @@
     }
     
     [self.tableView reloadData];
+    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
