@@ -9,6 +9,7 @@
 #import "GSPMasterViewController.h"
 
 #import "GSPNewCourseViewController.h"
+#import "GSPCourseViewController.h"
 
 #import "Course.h"
 
@@ -85,7 +86,6 @@
     return YES;
 }
 
-
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -120,16 +120,19 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UITableViewCell *cell = (UITableViewCell*)sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    [(GSPCourseViewController*)[segue destinationViewController] setCourse:[self.courses objectAtIndex:[indexPath indexAtPosition:1]]];
+    
 }
-
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
     GSPNewCourseViewController *source = [segue sourceViewController];
     Course *newCourse = source.course;
     
-    if (newCourse != nil)
+    if (newCourse != nil && [segue.identifier isEqualToString:@"NewCourseSegue"])
     {
         [self.courses addObject:newCourse];
         [self.tableView reloadData];

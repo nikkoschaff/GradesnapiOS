@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */; };
 		717B4DE418A28BD00069E770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE318A28BD00069E770 /* Foundation.framework */; };
 		717B4DE618A28BD00069E770 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE518A28BD00069E770 /* CoreGraphics.framework */; };
 		717B4DE818A28BD00069E770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE718A28BD00069E770 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPCourseViewController.h; sourceTree = "<group>"; };
+		7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPCourseViewController.m; sourceTree = "<group>"; };
 		717B4DE018A28BD00069E770 /* Gradesnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gradesnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B4DE318A28BD00069E770 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		717B4DE518A28BD00069E770 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +156,8 @@
 				717B4E2118A298D30069E770 /* Course.h */,
 				717B4E2218A298D30069E770 /* Course.m */,
 				717B4DEC18A28BD00069E770 /* Supporting Files */,
+				7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */,
+				7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */,
 			);
 			path = Gradesnap;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */,
 				717B4DF218A28BD00069E770 /* main.m in Sources */,
 				717B4E2618A298E20069E770 /* Student.m in Sources */,
+				7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,
 				717B4E2918A2990F0069E770 /* Assignment.m in Sources */,
 				717B4DF618A28BD00069E770 /* GSPAppDelegate.m in Sources */,
@@ -501,6 +507,7 @@
 				717B4E1D18A28BD00069E770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		717B4E1E18A28BD00069E770 /* Build configuration list for PBXNativeTarget "GradesnapTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +516,7 @@
 				717B4E2018A28BD00069E770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

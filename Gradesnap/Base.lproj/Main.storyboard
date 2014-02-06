@@ -45,6 +45,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="S9r-mb-OJG" kind="modal" identifier="CourseSegue" id="AxH-BD-h1d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -57,7 +60,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="8wb-vB-Iac"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qpR-Pg-9N4">
                             <connections>
-                                <segue destination="16e-PG-F5E" kind="modal" id="hE2-Yu-9Hr"/>
+                                <segue destination="16e-PG-F5E" kind="modal" identifier="NewCourseSegue" id="hE2-Yu-9Hr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,7 +123,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OU6-jS-Ndb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ld8-BK-Mp4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="850" y="64"/>
+            <point key="canvasLocation" x="838" y="800"/>
+        </scene>
+        <!--Course View Controller-->
+        <scene sceneID="OTb-Lp-EFK">
+            <objects>
+                <viewController id="S9r-mb-OJG" customClass="GSPCourseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AA6-gu-3h1"/>
+                        <viewControllerLayoutGuide type="bottom" id="aLK-p1-KvQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Gp-Ml-Fw1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-k9-W9b">
+                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="d7p-8L-UHD">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="rAp-iI-7mx">
+                                            <connections>
+                                                <segue destination="9U2-VT-Twj" kind="unwind" unwindAction="unwindToList:" id="c4h-qa-bTq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Average:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVt-5I-Mzt">
+                                <rect key="frame" x="20" y="86" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-aJ-9eB">
+                                <rect key="frame" x="139" y="86" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradeLabel" destination="iUZ-aJ-9eB" id="0QW-L6-oi3"/>
+                        <outlet property="navTitle" destination="d7p-8L-UHD" id="ERA-LY-cFY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHN-h9-3Xs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9U2-VT-Twj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="-396"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
