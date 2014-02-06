@@ -9,7 +9,10 @@
 #import "GSPCourseViewController.h"
 
 @interface GSPCourseViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *assignmentButton;
+@property (weak, nonatomic) IBOutlet UIButton *studentsButton;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @end
 
 @implementation GSPCourseViewController
@@ -40,12 +43,19 @@
 
 - (IBAction)unwindToCourse:(UIStoryboardSegue *)segue
 {
-    
+    // Nothing for now
 }
 
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // TODO set course for studentsViewController
+    
+    if (sender == self.studentsButton)
+    {
+        NSLog(@"stuentsbutton");
+        [(GSPStudentsViewController*)[(UINavigationController*)[segue destinationViewController] topViewController] setCourse:self.course];
+    }
+        
 }
 
 @end

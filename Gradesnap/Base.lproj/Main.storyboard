@@ -229,10 +229,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wX-J6-ihw">
                                 <rect key="frame" x="93" y="285" width="135" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Students">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="Students"/>
                                 <connections>
                                     <segue destination="C9L-Xd-yoH" kind="modal" id="4oU-Tc-MK5"/>
                                 </connections>
@@ -241,8 +239,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="assignmentButton" destination="2yp-t0-lh7" id="2ud-IC-fkI"/>
                         <outlet property="gradeLabel" destination="iUZ-aJ-9eB" id="0QW-L6-oi3"/>
                         <outlet property="navTitle" destination="d7p-8L-UHD" id="ERA-LY-cFY"/>
+                        <outlet property="studentsButton" destination="8wX-J6-ihw" id="VFg-rX-88i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHN-h9-3Xs" userLabel="First Responder" sceneMemberID="firstResponder"/>

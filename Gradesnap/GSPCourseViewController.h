@@ -10,10 +10,8 @@
 
 #import "Course.h"
 
+#import "GSPStudentsViewController.h"
+
 @interface GSPCourseViewController : UIViewController
 @property (nonatomic) Course *course;
-@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
-@property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
-
-
 @end
