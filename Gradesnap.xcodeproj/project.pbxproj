@@ -10,6 +10,7 @@
 		7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */; };
 		7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */; };
 		7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */; };
+		7103548F18A531FC00AAAE7E /* GSPStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */; };
 		717B4DE418A28BD00069E770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE318A28BD00069E770 /* Foundation.framework */; };
 		717B4DE618A28BD00069E770 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE518A28BD00069E770 /* CoreGraphics.framework */; };
 		717B4DE818A28BD00069E770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE718A28BD00069E770 /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 		7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewStudentViewController.m; sourceTree = "<group>"; };
 		7103548718A4058600AAAE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/Student.h; sourceTree = "<group>"; };
 		7103548918A4058600AAAE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/Student.m; sourceTree = "<group>"; };
+		7103548D18A531FC00AAAE7E /* GSPStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPStudentViewController.h; sourceTree = "<group>"; };
+		7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPStudentViewController.m; sourceTree = "<group>"; };
 		717B4DE018A28BD00069E770 /* Gradesnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gradesnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B4DE318A28BD00069E770 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		717B4DE518A28BD00069E770 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +112,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7103548A18A531C900AAAE7E /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				717B4E2D18A29B1C0069E770 /* GSPMasterViewController.h */,
+				717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */,
+				7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */,
+				7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */,
+				717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */,
+				717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */,
+				717B4E2118A298D30069E770 /* Course.h */,
+				717B4E2218A298D30069E770 /* Course.m */,
+			);
+			name = Course;
+			sourceTree = "<group>";
+		};
+		7103548B18A531D400AAAE7E /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				717B4E2718A2990F0069E770 /* Assignment.h */,
+				717B4E2818A2990F0069E770 /* Assignment.m */,
+			);
+			name = Assignment;
+			sourceTree = "<group>";
+		};
+		7103548C18A531E800AAAE7E /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				7103548018A3F9F800AAAE7E /* GSPStudentsViewController.h */,
+				7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */,
+				7103548318A3FE6000AAAE7E /* GSPNewStudentViewController.h */,
+				7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */,
+				7103548618A4058600AAAE7E /* Student.h */,
+				7103548818A4058600AAAE7E /* Student.m */,
+				7103548D18A531FC00AAAE7E /* GSPStudentViewController.h */,
+				7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */,
+			);
+			name = Student;
+			sourceTree = "<group>";
+		};
 		717B4DD718A28BD00069E770 = {
 			isa = PBXGroup;
 			children = (
@@ -146,27 +188,14 @@
 				717B4DF418A28BD00069E770 /* GSPAppDelegate.h */,
 				717B4DF518A28BD00069E770 /* GSPAppDelegate.m */,
 				717B4DF718A28BD00069E770 /* Main.storyboard */,
-				717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */,
-				717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */,
-				717B4E2D18A29B1C0069E770 /* GSPMasterViewController.h */,
-				717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */,
+				7103548A18A531C900AAAE7E /* Course */,
 				717B4E0318A28BD00069E770 /* Images.xcassets */,
 				717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */,
 				717B4E2A18A299AD0069E770 /* AssignmentStudent.h */,
 				717B4E2B18A299AD0069E770 /* AssignmentStudent.m */,
-				717B4E2718A2990F0069E770 /* Assignment.h */,
-				717B4E2818A2990F0069E770 /* Assignment.m */,
-				717B4E2118A298D30069E770 /* Course.h */,
-				717B4E2218A298D30069E770 /* Course.m */,
+				7103548B18A531D400AAAE7E /* Assignment */,
 				717B4DEC18A28BD00069E770 /* Supporting Files */,
-				7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */,
-				7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */,
-				7103548018A3F9F800AAAE7E /* GSPStudentsViewController.h */,
-				7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */,
-				7103548318A3FE6000AAAE7E /* GSPNewStudentViewController.h */,
-				7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */,
-				7103548618A4058600AAAE7E /* Student.h */,
-				7103548818A4058600AAAE7E /* Student.m */,
+				7103548C18A531E800AAAE7E /* Student */,
 			);
 			path = Gradesnap;
 			sourceTree = "<group>";
@@ -299,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */,
+				7103548F18A531FC00AAAE7E /* GSPStudentViewController.m in Sources */,
 				717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */,
 				7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */,
 				717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */,

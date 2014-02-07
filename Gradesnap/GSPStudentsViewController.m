@@ -8,6 +8,7 @@
 
 #import "GSPStudentsViewController.h"
 #import "GSPNewStudentViewController.h"
+#import "GSPStudentViewController.h"
 
 @interface GSPStudentsViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
@@ -117,6 +118,13 @@
     if (sender == self.addButton)
     {
         [(GSPNewStudentViewController*)[segue destinationViewController] setCourse:self.course];
+    }
+    else if ([segue.identifier isEqual:@"StudentSegue"])
+    {
+        [(GSPStudentViewController*)[segue destinationViewController] setCourse:self.course];
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        [(GSPStudentViewController*)[segue destinationViewController] setStudent:[self.students objectAtIndex:[indexPath indexAtPosition:1]]];
     }
 }
 
