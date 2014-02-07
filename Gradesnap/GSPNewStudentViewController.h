@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Student.h"
+#import "Course.h"
 
 @interface GSPNewStudentViewController : UIViewController
 @property (nonatomic) Student *student;

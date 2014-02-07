@@ -50,7 +50,6 @@
 {
     if (sender == self.studentsButton)
     {
-        NSLog(@"stuentsbutton");
         [(GSPStudentsViewController*)[(UINavigationController*)[segue destinationViewController] topViewController] setCourse:self.course];
     }
     // TODO add assignments

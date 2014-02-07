@@ -38,12 +38,12 @@
                                     <navigationItem title="New Student" id="C2l-7f-twC">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Q4h-tQ-rez">
                                             <connections>
-                                                <segue destination="K9o-SQ-6dt" kind="unwind" unwindAction="unwindToStudents:" id="RnW-ft-hZo"/>
+                                                <segue destination="K9o-SQ-6dt" kind="unwind" identifier="NewStudentSegue" unwindAction="unwindToStudents:" id="ZE4-rl-fvU"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="9ym-e8-nRr">
                                             <connections>
-                                                <segue destination="K9o-SQ-6dt" kind="unwind" unwindAction="unwindToStudents:" id="PJp-hA-sCE"/>
+                                                <segue destination="K9o-SQ-6dt" kind="unwind" identifier="NewStudentSegue" unwindAction="unwindToStudents:" id="A6Q-Kl-axd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -290,6 +290,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="rhY-7c-Xce" id="IXr-8t-xX2"/>
                         <outlet property="navTitle" destination="Uz0-A5-aI9" id="XVd-Yq-hix"/>
                     </connections>
                 </tableViewController>

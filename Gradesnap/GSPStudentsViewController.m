@@ -7,8 +7,10 @@
 //
 
 #import "GSPStudentsViewController.h"
+#import "GSPNewStudentViewController.h"
 
 @interface GSPStudentsViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @end
 
@@ -28,6 +30,23 @@
 
 - (void)viewDidLoad
 {
+    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(course == %@)",self.course];
+    [fetchRequest setPredicate:predicate];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Student" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.students = [NSMutableArray arrayWithArray:[context executeFetchRequest:fetchRequest error:&error]];
+    
+    if (![context save:&error]) {
+        NSLog(@"Error loading Students: %@", [error localizedDescription]);
+    }
+    
+    [self.tableView reloadData];
+    
+    
     [super viewDidLoad];
     self.navTitle.title = @"Students";
     self.navTitle.leftBarButtonItem.title = [NSString stringWithFormat:@"<%@",self.course.name];
@@ -99,21 +118,30 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (sender == self.addButton)
+    {
+        [(GSPNewStudentViewController*)[segue destinationViewController] setCourse:self.course];
+    }
 }
 
- */
 
 -(IBAction)unwindToStudents:(UIStoryboardSegue *)segue
 {
     // tODO
+    
+    GSPNewStudentViewController *source = [segue sourceViewController];
+    Student *newStudent = source.student;
+    
+    if (newStudent != nil && [segue.identifier isEqualToString:@"NewStudentSegue"])
+    {
+        [self.students addObject:newStudent];
+        [self.tableView reloadData];
+    }
 }
 
 

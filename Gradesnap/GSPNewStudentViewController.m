@@ -8,6 +8,7 @@
 
 #import "GSPNewStudentViewController.h"
 
+
 @interface GSPNewStudentViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic) IBOutlet UITextField *textField;
@@ -38,29 +39,29 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // TODO save student info
-    
     if (sender != self.doneButton) return;
     
     if (self.textField.text.length > 0) {
-        
-        
         NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
-        
+        NSError *error;
+
         Student *student = [NSEntityDescription
                           insertNewObjectForEntityForName:@"Student"
                           inManagedObjectContext:context];
         student.name = self.textField.text;
         student.course = self.course;
-        
+        self.student = student;
+
         // TODO set student/course relationships
         
-        NSError *error;
+        Course *course = (Course*)[context existingObjectWithID:self.course.objectID error:&error];
+        NSMutableSet *currentStudents = (NSMutableSet*)course.students;
+        [currentStudents addObject:student];
+        course.students = (NSSet*)currentStudents;
         if (![context save:&error]) {
-            NSLog(@"Error saving new course: %@", [error localizedDescription]);
+            NSLog(@"Error saving new course or adjusting course relationship: %@", [error localizedDescription]);
         }
-        
-        self.student = student;
+        self.course = course;
     }
 }
 
