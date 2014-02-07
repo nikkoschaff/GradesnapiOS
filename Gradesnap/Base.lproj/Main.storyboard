@@ -115,14 +115,17 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="8wb-vB-Iac"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qpR-Pg-9N4">
                             <connections>
-                                <segue destination="16e-PG-F5E" kind="modal" identifier="NewCourseSegue" id="hE2-Yu-9Hr"/>
+                                <segue destination="16e-PG-F5E" kind="modal" identifier="NewCourseSegue" id="PK7-3a-QPX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="qpR-Pg-9N4" id="TuR-Ao-V3Z"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="457" y="74"/>
         </scene>
         <!--New Course View Controller-->
         <scene sceneID="nzK-W2-nm1">
@@ -143,12 +146,12 @@
                                     <navigationItem title="New Course" id="X2q-zH-p34">
                                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="rjD-hB-g4y">
                                             <connections>
-                                                <segue destination="Ld8-BK-Mp4" kind="unwind" unwindAction="unwindToList:" id="cda-Lp-ESP"/>
+                                                <segue destination="Ld8-BK-Mp4" kind="unwind" identifier="NewCourseSegue" unwindAction="unwindToList:" id="z7u-k0-wfL"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="6KC-gW-FJV">
                                             <connections>
-                                                <segue destination="Ld8-BK-Mp4" kind="unwind" unwindAction="unwindToList:" id="U70-Jy-x4i"/>
+                                                <segue destination="Ld8-BK-Mp4" kind="unwind" identifier="NewCourseSegue" unwindAction="unwindToList:" id="uJW-N8-EAC"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

@@ -15,7 +15,7 @@
 
 
 @interface GSPMasterViewController ()
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 @end
 
 @implementation GSPMasterViewController
@@ -30,6 +30,8 @@
         // Custom initialization
     }
     return self;
+    
+    // TODO handle + bug
 }
 
 - (void)viewDidLoad
@@ -119,11 +121,12 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UITableViewCell *cell = (UITableViewCell*)sender;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    
-    [(GSPCourseViewController*)[segue destinationViewController] setCourse:[self.courses objectAtIndex:[indexPath indexAtPosition:1]]];
-    
+    if (sender != self.addButton)
+    {
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        [(GSPCourseViewController*)[segue destinationViewController] setCourse:[self.courses objectAtIndex:[indexPath indexAtPosition:1]]];
+    }
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
