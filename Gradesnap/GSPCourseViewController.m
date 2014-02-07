@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
     self.navTitle.title = self.course.name;
+    self.navTitle.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +41,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    if (editing == YES)
+    {
+    }
+    else
+    {
+    }
+}
 
 - (IBAction)unwindToCourse:(UIStoryboardSegue *)segue
 {

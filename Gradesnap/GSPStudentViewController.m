@@ -10,9 +10,7 @@
 
 @interface GSPStudentViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
-
 @end
 
 @implementation GSPStudentViewController
@@ -30,12 +28,24 @@
 {
     [super viewDidLoad];
     self.navTitle.title = self.student.name;
+    self.navTitle.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    if (editing == YES)
+    {
+    }
+    else
+    {
+    }
 }
 
 @end
