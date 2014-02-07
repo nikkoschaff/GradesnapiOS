@@ -11,6 +11,7 @@
 #import "Course.h"
 
 #import "GSPStudentsViewController.h"
+#import "GSPAssignmentsViewController.h"
 
 @interface GSPCourseViewController : UIViewController
 @property (nonatomic) Course *course;

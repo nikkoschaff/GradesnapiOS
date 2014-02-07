@@ -52,7 +52,10 @@
     {
         [(GSPStudentsViewController*)[(UINavigationController*)[segue destinationViewController] topViewController] setCourse:self.course];
     }
-    // TODO add assignments
+    if (sender == self.assignmentButton)
+    {
+       [(GSPAssignmentsViewController*)[(UINavigationController*)[segue destinationViewController] topViewController] setCourse:self.course];
+    }
 }
 
 @end

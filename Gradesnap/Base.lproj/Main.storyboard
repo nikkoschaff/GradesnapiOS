@@ -228,6 +228,9 @@
                                 <state key="normal" title="Assignments">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4wv-Z3-5Vb" kind="modal" identifier="CourseToAssignmentsSegue" id="sEZ-iX-LYl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wX-J6-ihw">
                                 <rect key="frame" x="93" y="285" width="135" height="112"/>
@@ -252,6 +255,47 @@
                 <exit id="9U2-VT-Twj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="934" y="64"/>
+        </scene>
+        <!--Assignments View Controller - Assignments-->
+        <scene sceneID="w6C-k0-Abx">
+            <objects>
+                <tableViewController id="491-gb-31G" customClass="GSPAssignmentsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SkU-dp-J5X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListAssignmentCell" id="qrD-OB-aF9">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qrD-OB-aF9" id="kgd-Pm-Q6L">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="491-gb-31G" id="mHf-dN-xz5"/>
+                            <outlet property="delegate" destination="491-gb-31G" id="pKY-da-Ocz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Assignments" id="At8-My-36a">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KlY-rG-8Hs">
+                            <connections>
+                                <segue destination="JAq-NJ-0bS" kind="unwind" unwindAction="unwindToCourse:" id="2oy-aC-HNx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I2b-6d-mhZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="I2b-6d-mhZ" id="pwF-Dc-qsg"/>
+                        <outlet property="backButton" destination="KlY-rG-8Hs" id="CRz-M6-xCE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWg-kS-qCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JAq-NJ-0bS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="-380"/>
         </scene>
         <!--Student View Controller-->
         <scene sceneID="L8s-hS-4VF">
@@ -359,6 +403,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9B-Gc-s7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1294" y="681"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DAN-gi-UC8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4wv-Z3-5Vb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Byc-tn-JqX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="491-gb-31G" kind="relationship" relationship="rootViewController" id="0p0-OX-NJV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ao-eR-hph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="-380"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
