@@ -51,8 +51,6 @@
         student.name = self.textField.text;
         student.course = self.course;
         self.student = student;
-
-        // TODO set student/course relationships
         
         Course *course = (Course*)[context existingObjectWithID:self.course.objectID error:&error];
         NSMutableSet *currentStudents = (NSMutableSet*)course.students;
