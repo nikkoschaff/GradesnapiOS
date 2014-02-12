@@ -78,7 +78,9 @@
     Assignment *assignment = [self.assignments objectAtIndex:indexPath.row];
     cell.textLabel.text = assignment.name;
     // TODO format date description
-    cell.detailTextLabel.text = assignment.date.description;
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    cell.detailTextLabel.text = [dateFormatter stringFromDate:assignment.date];
     
     return cell;
 }
