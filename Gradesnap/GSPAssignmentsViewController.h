@@ -12,6 +12,7 @@
 #import "Assignment.h"
 
 #import "GSPNewAssignmentViewController.h"
+#import "GSPAssignmentViewController.h"
 
 @interface GSPAssignmentsViewController : UITableViewController
 @property Course *course;

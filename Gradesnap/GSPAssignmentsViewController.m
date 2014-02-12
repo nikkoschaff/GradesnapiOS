@@ -30,8 +30,6 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-
     NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     
@@ -42,13 +40,12 @@
     NSError *error;
     self.assignments = [NSMutableArray arrayWithArray:[context executeFetchRequest:fetchRequest error:&error]];
     
-    if (![context save:&error]) {
+    if (![context save:&error])
+    {
         NSLog(@"Error loading Assignments: %@", [error localizedDescription]);
     }
     
     [self.tableView reloadData];
-    
-    
     [super viewDidLoad];
 }
 
@@ -77,7 +74,6 @@
     
     Assignment *assignment = [self.assignments objectAtIndex:indexPath.row];
     cell.textLabel.text = assignment.name;
-    // TODO format date description
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     cell.detailTextLabel.text = [dateFormatter stringFromDate:assignment.date];
@@ -123,13 +119,13 @@
     {
         [(GSPNewAssignmentViewController*)[segue destinationViewController] setCourse:self.course];
     }
-//    else if ([segue.identifier isEqual:@"AssignmentSegue"])
-//    {
-//        [(GSPStudentViewController*)[segue destinationViewController] setCourse:self.course];
-//        UITableViewCell *cell = (UITableViewCell*)sender;
-//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//        [(GSPStudentViewController*)[segue destinationViewController] setStudent:[self.students objectAtIndex:[indexPath indexAtPosition:1]]];
-//    }
+    else if ([segue.identifier isEqual:@"AssignmentSegue"])
+    {
+        [(GSPAssignmentViewController*)[segue destinationViewController] setCourse:self.course];
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        [(GSPAssignmentViewController*)[segue destinationViewController] setAssignment:[self.assignments objectAtIndex:[indexPath indexAtPosition:1]]];
+    }
 }
 
 

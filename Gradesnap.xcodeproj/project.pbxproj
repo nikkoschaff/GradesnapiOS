@@ -34,6 +34,7 @@
 		717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */; };
 		717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */; };
 		718393A718ABBA9900225935 /* GSPNewAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */; };
+		718393AA18ABC9C400225935 /* GSPAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718393A918ABC9C400225935 /* GSPAssignmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewCourseViewController.m; sourceTree = "<group>"; };
 		718393A518ABBA9900225935 /* GSPNewAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewAssignmentViewController.h; sourceTree = "<group>"; };
 		718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewAssignmentViewController.m; sourceTree = "<group>"; };
+		718393A818ABC9C400225935 /* GSPAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAssignmentViewController.h; sourceTree = "<group>"; };
+		718393A918ABC9C400225935 /* GSPAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPAssignmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */,
 				718393A518ABBA9900225935 /* GSPNewAssignmentViewController.h */,
 				718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */,
+				718393A818ABC9C400225935 /* GSPAssignmentViewController.h */,
+				718393A918ABC9C400225935 /* GSPAssignmentViewController.m */,
 			);
 			name = Assignment;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */,
+				718393AA18ABC9C400225935 /* GSPAssignmentViewController.m in Sources */,
 				7103548F18A531FC00AAAE7E /* GSPStudentViewController.m in Sources */,
 				717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */,
 				7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */,

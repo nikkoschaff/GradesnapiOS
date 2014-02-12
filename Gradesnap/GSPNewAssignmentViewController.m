@@ -48,16 +48,19 @@
         Assignment *assignment = [NSEntityDescription insertNewObjectForEntityForName:@"Assignment" inManagedObjectContext:context];
         assignment.name = self.textField.text;
         assignment.date = self.datePicker.date;
+        assignment.course = self.course;
+        self.assignment = assignment;
         
         Course *course = (Course*)[context existingObjectWithID:self.course.objectID error:&error];
         NSMutableSet *currentAssignments = (NSMutableSet*)course.assignments;
         [currentAssignments addObject:assignment];
         course.assignments = (NSSet*)currentAssignments;
         
-        if (![context save:&error]) {
+        if (![context save:&error])
+        {
             NSLog(@"Error saving new Assignment: %@", [error localizedDescription]);
         }
-        self.assignment = assignment;
+        self.course = course;
     }
 }
 

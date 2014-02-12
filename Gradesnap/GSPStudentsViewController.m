@@ -41,13 +41,12 @@
     NSError *error;
     self.students = [NSMutableArray arrayWithArray:[context executeFetchRequest:fetchRequest error:&error]];
     
-    if (![context save:&error]) {
+    if (![context save:&error])
+    {
         NSLog(@"Error loading Students: %@", [error localizedDescription]);
     }
-    
+
     [self.tableView reloadData];
-    
-    
     [super viewDidLoad];
 }
 

@@ -45,9 +45,7 @@
         NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
         NSError *error;
 
-        Student *student = [NSEntityDescription
-                          insertNewObjectForEntityForName:@"Student"
-                          inManagedObjectContext:context];
+        Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:context];
         student.name = self.textField.text;
         student.course = self.course;
         self.student = student;
