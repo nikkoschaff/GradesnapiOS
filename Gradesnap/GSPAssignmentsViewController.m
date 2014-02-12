@@ -16,6 +16,9 @@
 
 @implementation GSPAssignmentsViewController
 
+@synthesize course;
+@synthesize assignments;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -29,11 +32,24 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(course == %@)",self.course];
+    [fetchRequest setPredicate:predicate];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Assignment" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.assignments = [NSMutableArray arrayWithArray:[context executeFetchRequest:fetchRequest error:&error]];
+    
+    if (![context save:&error]) {
+        NSLog(@"Error loading Assignments: %@", [error localizedDescription]);
+    }
+    
+    [self.tableView reloadData];
+    
+    
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,63 +72,76 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ListAssignmentCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Assignment *assignment = [self.assignments objectAtIndex:indexPath.row];
+    cell.textLabel.text = assignment.name;
+    // TODO format date description
+    cell.detailTextLabel.text = assignment.date.description;
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+        [context deleteObject:[self.assignments objectAtIndex:[indexPath indexAtPosition:1]]];
+        [context save:nil];
+        
+        [self.assignments removeObjectAtIndex:[indexPath indexAtPosition:1]];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
+    }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
-/*
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (sender == self.addButton)
+    {
+        [(GSPNewAssignmentViewController*)[segue destinationViewController] setCourse:self.course];
+    }
+//    else if ([segue.identifier isEqual:@"AssignmentSegue"])
+//    {
+//        [(GSPStudentViewController*)[segue destinationViewController] setCourse:self.course];
+//        UITableViewCell *cell = (UITableViewCell*)sender;
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//        [(GSPStudentViewController*)[segue destinationViewController] setStudent:[self.students objectAtIndex:[indexPath indexAtPosition:1]]];
+//    }
 }
 
- */
+
+
+- (IBAction)unwindToAssignments:(UIStoryboardSegue *)segue
+{
+    GSPNewAssignmentViewController *source = [segue sourceViewController];
+    Assignment *newAssignment = source.assignment;
+    
+    if (newAssignment != nil && [segue.identifier isEqualToString:@"NewAssignmentSegue"])
+    {
+        [self.assignments addObject:newAssignment];
+        [self.tableView reloadData];
+    }
+}
 
 @end

@@ -33,6 +33,7 @@
 		717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2B18A299AD0069E770 /* AssignmentStudent.m */; };
 		717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */; };
 		717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */; };
+		718393A718ABBA9900225935 /* GSPNewAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPMasterViewController.m; sourceTree = "<group>"; };
 		717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewCourseViewController.h; sourceTree = "<group>"; };
 		717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewCourseViewController.m; sourceTree = "<group>"; };
+		718393A518ABBA9900225935 /* GSPNewAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewAssignmentViewController.h; sourceTree = "<group>"; };
+		718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewAssignmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				717B4E2818A2990F0069E770 /* Assignment.m */,
 				7103549018A5350E00AAAE7E /* GSPAssignmentsViewController.h */,
 				7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */,
+				718393A518ABBA9900225935 /* GSPNewAssignmentViewController.h */,
+				718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */,
 			);
 			name = Assignment;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				717B4E2318A298D30069E770 /* Course.m in Sources */,
 				717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */,
 				717B4DF218A28BD00069E770 /* main.m in Sources */,
+				718393A718ABBA9900225935 /* GSPNewAssignmentViewController.m in Sources */,
 				7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,
 				7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.m in Sources */,

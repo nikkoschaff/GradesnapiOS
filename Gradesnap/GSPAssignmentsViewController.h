@@ -11,6 +11,8 @@
 #import "Student.h"
 #import "Assignment.h"
 
+#import "GSPNewAssignmentViewController.h"
+
 @interface GSPAssignmentsViewController : UITableViewController
 @property Course *course;
 @property NSMutableArray *assignments;

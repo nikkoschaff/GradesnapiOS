@@ -5,7 +5,7 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="assignmentStudents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssignmentStudent" inverseName="assignment" inverseEntity="AssignmentStudent" syncable="YES"/>
-        <relationship name="courses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assignments" inverseEntity="Course" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assignments" inverseEntity="Course" syncable="YES"/>
     </entity>
     <entity name="AssignmentStudent" representedClassName="AssignmentStudent" syncable="YES">
         <attribute name="answers" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -15,7 +15,7 @@
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assignment" inverseName="courses" inverseEntity="Assignment" syncable="YES"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assignment" inverseName="course" inverseEntity="Assignment" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="course" inverseEntity="Student" syncable="YES"/>
     </entity>
     <entity name="Student" representedClassName="Student" syncable="YES">

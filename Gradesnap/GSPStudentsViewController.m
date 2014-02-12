@@ -49,8 +49,6 @@
     
     
     [super viewDidLoad];
-    self.navTitle.title = @"Students";
-    self.navTitle.leftBarButtonItem.title = [NSString stringWithFormat:@"<%@",self.course.name];
 }
 
 - (void)didReceiveMemoryWarning
