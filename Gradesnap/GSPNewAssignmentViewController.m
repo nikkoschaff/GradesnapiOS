@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -28,13 +28,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [self.textField setDelegate:self];
+    [self.textField setReturnKeyType:UIReturnKeyDone];
+    
+    if (self.answers == nil)
+    {
+        [self.doneButton setEnabled:NO];
+    }
+    else
+    {
+        [self.doneButton setEnabled:YES];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)unwindToNewAssignment:(UIStoryboardSegue *)segue
+{
+    GSPNewAnswerKeyViewController *source = [segue sourceViewController];
+    self.answers = source.answers;
+    if (self.answers != nil)
+    {
+        [self.doneButton setEnabled:YES];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -49,6 +75,7 @@
         assignment.name = self.textField.text;
         assignment.date = self.datePicker.date;
         assignment.course = self.course;
+        assignment.answers = self.answers;
         self.assignment = assignment;
         
         Course *course = (Course*)[context existingObjectWithID:self.course.objectID error:&error];
@@ -60,11 +87,8 @@
         {
             NSLog(@"Error saving new Assignment: %@", [error localizedDescription]);
         }
-        self.course = course;
+        self.course = course;        
     }
 }
-
-
-
 
 @end

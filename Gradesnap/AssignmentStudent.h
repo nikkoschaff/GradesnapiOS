@@ -14,7 +14,7 @@
 @interface AssignmentStudent : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * grade;
-@property (nonatomic, retain) NSData * answers;
+@property (nonatomic, retain) NSString * answers;
 @property (nonatomic, retain) Assignment *assignment;
 @property (nonatomic, retain) Student *student;
 

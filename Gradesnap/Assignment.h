@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSData * answers;
+@property (nonatomic, retain) NSString * answers;
 @property (nonatomic, retain) Course *course;
 @property (nonatomic, retain) NSSet *assignmentStudents;
 @end
