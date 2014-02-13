@@ -59,6 +59,10 @@
 
 -(IBAction)addQuestion:(id)sender
 {
+    // TODO add entire row instead of single box
+    
+    
+    NSLog(@"Add question");
     NSMutableArray *answerRow = [NSMutableArray new];
     [answerRow addObject:[NSString stringWithFormat:@"%u",[self.answerCells count]-1]];
     [answerRow addObject:@"A"];
