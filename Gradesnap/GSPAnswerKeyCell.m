@@ -24,12 +24,12 @@
     if (selected)
     {
         NSLog(@"Selected->Unselected");
-        [self setBackgroundColor:[UIColor blackColor]];
+        [self setBackgroundColor:[UIColor greenColor]];
     }
     else
     {
         NSLog(@"Unelected->Selected");
-        [self setBackgroundColor:[UIColor yellowColor]];
+        [self setBackgroundColor:[UIColor blueColor]];
 
     }
 }
