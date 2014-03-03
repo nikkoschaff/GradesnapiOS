@@ -29,9 +29,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // TODO set up sections
 
     self.answerCells = [NSMutableArray new];
-    for (int i = 0; i < 10; i++)
+    
+    [self.collectionView setAllowsSelection:YES];
+    
+    for (int i = 0; i < 2; i++)
     {
         [self addQuestion:nil];
     }
@@ -44,35 +49,53 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView {
+    NSInteger numberOfSections = (self.answerCells.count == 0) ? 0 : self.answerCells.count/5;
+    return numberOfSections;
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.answerCells count];
+    return 5;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     GSPAnswerKeyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AnswerKeyCell" forIndexPath:indexPath];
-    // TODO set details
+    [[cell letter] setText:[self.answerCells objectAtIndex:(indexPath.section*5+indexPath.row)]];
     return cell;
 }
 
+#pragma mark UICollectionViewDelegate
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // TODO Get selection working properly
+    NSLog(@"Item selected at %@ (%li => %li)",indexPath.description,(long)indexPath.section,(long)indexPath.row);
+    [[self.collectionView cellForItemAtIndexPath:indexPath] setSelected:![self.collectionView cellForItemAtIndexPath:indexPath].selected];
+}
+
+
+#pragma mark Answer Key Control
 
 -(IBAction)addQuestion:(id)sender
 {
-    // TODO add entire row instead of single box
-    
-    
-    NSLog(@"Add question");
-    NSMutableArray *answerRow = [NSMutableArray new];
-    [answerRow addObject:[NSString stringWithFormat:@"%u",[self.answerCells count]-1]];
-    [answerRow addObject:@"A"];
-    [answerRow addObject:@"B"];
-    [answerRow addObject:@"C"];
-    [answerRow addObject:@"D"];
-    [answerRow addObject:@"E"];
-    [self.answerCells addObject:answerRow];
+    [self.answerCells addObject:@"A"];
+    [self.answerCells addObject:@"B"];
+    [self.answerCells addObject:@"C"];
+    [self.answerCells addObject:@"D"];
+    [self.answerCells addObject:@"E"];
     [self.collectionView reloadData];
 }
+
+-(IBAction)deleteButtonPressed:(id)sender
+{
+    NSLog(@"Delete button pressed!");
+}
+
+# pragma mark - Navigation
 
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

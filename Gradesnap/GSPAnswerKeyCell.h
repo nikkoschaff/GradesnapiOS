@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GSPAnswerKeyCell : UICollectionViewCell
-
+-(void)setSelected:(BOOL)selected;
+@property IBOutlet UILabel *letter;
 @end

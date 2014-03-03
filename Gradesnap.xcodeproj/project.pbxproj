@@ -12,6 +12,7 @@
 		7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */; };
 		7103548F18A531FC00AAAE7E /* GSPStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */; };
 		7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */; };
+		716A5FDC18C5146000796850 /* GSPSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 716A5FDB18C5146000796850 /* GSPSectionHeaderView.m */; };
 		716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.m */; };
 		716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.m */; };
 		717B4DE418A28BD00069E770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE318A28BD00069E770 /* Foundation.framework */; };
@@ -62,6 +63,8 @@
 		7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPStudentViewController.m; sourceTree = "<group>"; };
 		7103549018A5350E00AAAE7E /* GSPAssignmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAssignmentsViewController.h; sourceTree = "<group>"; };
 		7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPAssignmentsViewController.m; sourceTree = "<group>"; };
+		716A5FDA18C5146000796850 /* GSPSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPSectionHeaderView.h; sourceTree = "<group>"; };
+		716A5FDB18C5146000796850 /* GSPSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPSectionHeaderView.m; sourceTree = "<group>"; };
 		716B1E6A18AC038E00556762 /* GSPNewAnswerKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewAnswerKeyViewController.h; sourceTree = "<group>"; };
 		716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewAnswerKeyViewController.m; sourceTree = "<group>"; };
 		716B1E6D18AC15D900556762 /* GSPAnswerKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAnswerKeyCell.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.m */,
 				716B1E6D18AC15D900556762 /* GSPAnswerKeyCell.h */,
 				716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.m */,
+				716A5FDA18C5146000796850 /* GSPSectionHeaderView.h */,
+				716A5FDB18C5146000796850 /* GSPSectionHeaderView.m */,
 			);
 			name = "Answer Key";
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 				717B4DF218A28BD00069E770 /* main.m in Sources */,
 				716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.m in Sources */,
 				718393A718ABBA9900225935 /* GSPNewAssignmentViewController.m in Sources */,
+				716A5FDC18C5146000796850 /* GSPSectionHeaderView.m in Sources */,
 				7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,
 				7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.m in Sources */,

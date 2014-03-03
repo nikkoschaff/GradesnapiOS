@@ -1,14 +1,18 @@
 //
-//  GSPAnswerKeyCell.m
+//  GSPSectionHeaderView.m
 //  Gradesnap
 //
-//  Created by Nikko Schaff on 2/12/14.
+//  Created by Nikko Schaff on 3/3/14.
 //  Copyright (c) 2014 Gradesnap. All rights reserved.
 //
 
-#import "GSPAnswerKeyCell.h"
+#import "GSPSectionHeaderView.h"
 
-@implementation GSPAnswerKeyCell
+@interface GSPSectionHeaderView ()
+@property IBOutlet UIButton *deleteButton;
+@end
+
+@implementation GSPSectionHeaderView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -17,21 +21,6 @@
         // Initialization code
     }
     return self;
-}
-
--(void)setSelected:(BOOL)selected
-{
-    if (selected)
-    {
-        NSLog(@"Selected->Unselected");
-        [self setBackgroundColor:[UIColor blackColor]];
-    }
-    else
-    {
-        NSLog(@"Unelected->Selected");
-        [self setBackgroundColor:[UIColor yellowColor]];
-
-    }
 }
 
 /*
