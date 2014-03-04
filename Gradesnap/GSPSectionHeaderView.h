@@ -14,4 +14,5 @@
 
 @interface GSPSectionHeaderView : UICollectionReusableView
 @property IBOutlet UILabel *questionNumberLabel;
+@property IBOutlet UIButton *deleteButton;
 @end

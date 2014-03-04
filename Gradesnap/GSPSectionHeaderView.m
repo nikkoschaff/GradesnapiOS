@@ -8,10 +8,6 @@
 
 #import "GSPSectionHeaderView.h"
 
-@interface GSPSectionHeaderView ()
-@property IBOutlet UIButton *deleteButton;
-@end
-
 @implementation GSPSectionHeaderView
 
 - (id)initWithFrame:(CGRect)frame

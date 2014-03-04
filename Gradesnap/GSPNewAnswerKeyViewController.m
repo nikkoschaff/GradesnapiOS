@@ -52,8 +52,7 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView {
-    NSInteger numberOfSections = (self.answerCells.count == 0) ? 0 : self.answerCells.count/5;
-    return numberOfSections;
+    return ((self.answerCells.count == 0) ? 0 : self.answerCells.count/5);
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -66,6 +65,16 @@
     GSPAnswerKeyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AnswerKeyCell" forIndexPath:indexPath];
     [[cell letter] setText:[self.answerCells objectAtIndex:(indexPath.section*5+indexPath.row)]];
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    GSPSectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                        withReuseIdentifier:@"AnswerKeyHeaderView"
+                                                            forIndexPath:indexPath];
+    
+    headerView.questionNumberLabel.text = [[NSString alloc]initWithFormat:@"%li:", indexPath.section + 1];
+    return headerView;
 }
 
 #pragma mark UICollectionViewDelegate

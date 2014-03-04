@@ -67,6 +67,8 @@
 {
     if (sender != self.doneButton) return;
     
+    // TODOOOOOOOO if someone hits answer key again after making one, GO TO EDIT NOT NEWWWWWWWWWWWW
+    
     if (self.textField.text.length > 0) {
         NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
         NSError *error;

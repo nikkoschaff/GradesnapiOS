@@ -548,7 +548,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </view>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerKeyHeader" id="nzd-Pm-oEw" customClass="GSPSectionHeaderView">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerKeyHeaderView" id="nzd-Pm-oEw" customClass="GSPSectionHeaderView">
                             <rect key="frame" x="0.0" y="64" width="320" height="35"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
