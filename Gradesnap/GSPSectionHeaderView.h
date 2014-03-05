@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol SectionHeaderViewDelegate <NSObject>
--(IBAction)deleteButtonPressed:(id)sender;
-@end
-
 @interface GSPSectionHeaderView : UICollectionReusableView
 @property IBOutlet UILabel *questionNumberLabel;
-@property IBOutlet UIButton *deleteButton;
 @end

@@ -73,7 +73,7 @@
                                                         withReuseIdentifier:@"AnswerKeyHeaderView"
                                                             forIndexPath:indexPath];
     
-    headerView.questionNumberLabel.text = [[NSString alloc]initWithFormat:@"%li:", indexPath.section + 1];
+    headerView.questionNumberLabel.text = [[NSString alloc]initWithFormat:@"%li", indexPath.section + 1];
     return headerView;
 }
 
@@ -97,11 +97,6 @@
     [self.answerCells addObject:@"D"];
     [self.answerCells addObject:@"E"];
     [self.collectionView reloadData];
-}
-
--(IBAction)deleteButtonPressed:(id)sender
-{
-    NSLog(@"Delete button pressed!");
 }
 
 # pragma mark - Navigation
