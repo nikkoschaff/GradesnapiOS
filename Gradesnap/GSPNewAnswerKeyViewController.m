@@ -18,9 +18,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
+    if (self)
+    {
     }
     return self;
 }
@@ -28,19 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    // TODO set up sections
-
+    [self.collectionView setAllowsMultipleSelection:YES];
     self.answerCells = [NSMutableArray new];
-    
-    [self.collectionView setAllowsSelection:YES];
-    
-    for (int i = 0; i < 2; i++)
-    {
-        [self addQuestion:nil];
-    }
-    
     [self.collectionView reloadData];
 }
 
@@ -81,9 +69,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO Get selection working properly
     NSLog(@"Item selected at %@ (%li => %li)",indexPath.description,(long)indexPath.section,(long)indexPath.row);
-    [[self.collectionView cellForItemAtIndexPath:indexPath] setSelected:![self.collectionView cellForItemAtIndexPath:indexPath].selected];
 }
 
 
@@ -103,22 +89,31 @@
 
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // TODO turn answers from collection to string
-
-    NSMutableString *answersToReturn = [NSMutableString new];
-    for (int i = 0; i < self.answerCells.count; i++)
+    if (self.answerCells.count == 0)
     {
-        for (int n = 0; n < 6; n++)
+        self.answers = [NSString new];
+        return;
+    }
+    
+    NSMutableString *answersToReturn = [NSMutableString new];
+    NSIndexPath *indexPath = [NSIndexPath new];
+    for (int section = 0; section < self.answerCells.count/5; section++)
+    {
+        for (int item = 0; item < 5; item++)
         {
+            indexPath = [NSIndexPath indexPathForItem:item inSection:section];
+            GSPAnswerKeyCell *cell = (GSPAnswerKeyCell*)[self collectionView:self.collectionView cellForItemAtIndexPath:indexPath];
+            if (cell.selected)
+            {
+                [answersToReturn appendString:cell.letter.text];
+            }
             
         }
         [answersToReturn appendString:@","];
     }
     
-    [answersToReturn deleteCharactersInRange:NSMakeRange(answersToReturn.length-1,0)];
     NSLog(@"Answers being set: %@",answersToReturn);
     self.answers = (NSString*)answersToReturn;
-    
 }
 
 @end

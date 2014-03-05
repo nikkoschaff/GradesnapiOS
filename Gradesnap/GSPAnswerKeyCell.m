@@ -21,6 +21,7 @@
 
 -(void)setSelected:(BOOL)selected
 {
+    [super setSelected:selected];
     if (selected)
     {
         NSLog(@"Selected->Unselected");
