@@ -50,7 +50,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)unwindToNewAssignment:(UIStoryboardSegue *)segue
@@ -66,32 +65,27 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (sender != self.doneButton) return;
-    
-    // TODOOOOOOOO if someone hits answer key again after making one, GO TO EDIT NOT NEWWWWWWWWWWWW
-    
-    
-    if (self.textField.text.length > 0) {
-        NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
-        NSError *error;
 
-        Assignment *assignment = [NSEntityDescription insertNewObjectForEntityForName:@"Assignment" inManagedObjectContext:context];
-        assignment.name = self.textField.text;
-        assignment.date = self.datePicker.date;
-        assignment.course = self.course;
-        assignment.answers = self.answers;
-        self.assignment = assignment;
-        
-        Course *course = (Course*)[context existingObjectWithID:self.course.objectID error:&error];
-        NSMutableSet *currentAssignments = (NSMutableSet*)course.assignments;
-        [currentAssignments addObject:assignment];
-        course.assignments = (NSSet*)currentAssignments;
-        
-        if (![context save:&error])
-        {
-            NSLog(@"Error saving new Assignment: %@", [error localizedDescription]);
-        }
-        self.course = course;        
+    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(managedObjectContext)];
+    NSError *error;
+    
+    Assignment *assignment = [NSEntityDescription insertNewObjectForEntityForName:@"Assignment" inManagedObjectContext:context];
+    assignment.name = self.textField.text;
+    assignment.date = self.datePicker.date;
+    assignment.course = self.course;
+    assignment.answers = self.answers;
+    self.assignment = assignment;
+    
+    Course *course = (Course*)[context existingObjectWithID:self.course.objectID error:&error];
+    NSMutableSet *currentAssignments = (NSMutableSet*)course.assignments;
+    [currentAssignments addObject:assignment];
+    course.assignments = (NSSet*)currentAssignments;
+    
+    if (![context save:&error])
+    {
+        NSLog(@"Error saving new Assignment: %@", [error localizedDescription]);
     }
+    self.course = course;
 }
 
 @end

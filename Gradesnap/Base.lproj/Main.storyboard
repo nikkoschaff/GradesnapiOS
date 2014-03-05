@@ -439,7 +439,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="aVs-JU-5Cx">
                                             <connections>
-                                                <segue destination="FJq-8c-e7V" kind="unwind" unwindAction="unwindToAssignments:" id="NXc-MQ-I3d"/>
+                                                <segue destination="FJq-8c-e7V" kind="unwind" identifier="NewAssignmentSegue" unwindAction="unwindToAssignments:" id="NXc-MQ-I3d"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -452,7 +452,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gl1-AB-DCF" kind="modal" id="ZeP-WA-nDQ"/>
+                                    <segue destination="Gl1-AB-DCF" kind="modal" identifier="NewAssignmentSegue" id="ZeP-WA-nDQ"/>
                                 </connections>
                             </button>
                         </subviews>
