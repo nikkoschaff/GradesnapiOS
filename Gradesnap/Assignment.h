@@ -18,6 +18,8 @@
 @property (nonatomic, retain) NSString * answers;
 @property (nonatomic, retain) Course *course;
 @property (nonatomic, retain) NSSet *assignmentStudents;
+
+-(float)classAverage;
 @end
 
 @interface Assignment (CoreDataGeneratedAccessors)

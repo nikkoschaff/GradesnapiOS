@@ -18,4 +18,9 @@
 @dynamic course;
 @dynamic assignmentStudents;
 
+-(float)classAverage
+{
+    return 0.0f;
+}
+
 @end

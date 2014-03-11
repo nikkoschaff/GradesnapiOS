@@ -69,7 +69,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Item selected at %@ (%li => %li)",indexPath.description,(long)indexPath.section,(long)indexPath.row);
+//    NSLog(@"Item selected at %@ (%li => %li)",indexPath.description,(long)indexPath.section,(long)indexPath.row);
 }
 
 
@@ -112,7 +112,6 @@
         [answersToReturn appendString:@","];
     }
     
-    NSLog(@"Answers being set: %@",answersToReturn);
     self.answers = (NSString*)answersToReturn;
 }
 

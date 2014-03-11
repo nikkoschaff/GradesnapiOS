@@ -9,7 +9,9 @@
 #import "GSPAssignmentViewController.h"
 
 @interface GSPAssignmentViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *classAverageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @end
 
 @implementation GSPAssignmentViewController
@@ -26,13 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.classAverageLabel.text = [NSString stringWithFormat:@"Class Average: %f",[self.assignment classAverage]];
+    self.navTitle.title = self.assignment.name;
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    self.dateLabel.text = [dateFormatter stringFromDate:self.assignment.date];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

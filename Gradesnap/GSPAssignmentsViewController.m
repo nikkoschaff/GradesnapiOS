@@ -128,16 +128,11 @@
     }
 }
 
-
-
-
 - (IBAction)unwindToAssignments:(UIStoryboardSegue *)segue
 {
     GSPNewAssignmentViewController *source = [segue sourceViewController];
     Assignment *newAssignment = source.assignment;
-    
-    NSLog(@"UNWINDING TO ASSIGNMENTS: SEGUE = %@",segue.identifier);
-    
+        
     if (newAssignment != nil && [segue.identifier isEqualToString:@"NewAssignmentSegue"])
     {
         [self.assignments addObject:newAssignment];
