@@ -2,4 +2,80 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gradesnap/GSPAssignmentViewController.mm"
+            timestampString = "416329597.153285"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-prepareForSegue:sender:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GSPAssignmentViewController prepareForSegue:sender:]"
+                  moduleName = "Gradesnap"
+                  urlString = "file:///Users/wjs2/Documents/Gradesnap/Gradesnap/GSPAssignmentViewController.mm"
+                  timestampString = "416329694.888101"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "643">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GSPAssignmentViewController prepareForSegue:sender:]"
+                  moduleName = "Gradesnap"
+                  urlString = "file:///Users/wjs2/Documents/Gradesnap/Gradesnap/GSPAssignmentViewController.mm"
+                  timestampString = "416329694.888432"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "707">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GSPAssignmentViewController prepareForSegue:sender:]"
+                  moduleName = "Gradesnap"
+                  urlString = "file:///Users/wjs2/Documents/Gradesnap/Gradesnap/GSPAssignmentViewController.mm"
+                  timestampString = "416329694.888723"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "872">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GSPAssignmentViewController prepareForSegue:sender:]"
+                  moduleName = "Gradesnap"
+                  urlString = "file:///Users/wjs2/Documents/Gradesnap/Gradesnap/GSPAssignmentViewController.mm"
+                  timestampString = "416329694.889046"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "924">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

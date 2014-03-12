@@ -11,7 +11,7 @@
 
 #import <opencv2/opencv.hpp>
 #import "UIImageCVMatConverter.h"
-
+#import "ImageReader.h"
 
 
 @interface GSPAssignmentViewController ()
@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
+@property (weak, nonatomic) IBOutlet UIButton *gradeExamsButton;
 @end
 
 @implementation GSPAssignmentViewController
@@ -31,6 +32,8 @@
     }
     return self;
 }
+
+#pragma mark Inherited
 
 - (void)viewDidLoad
 {
@@ -51,6 +54,25 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)unwindToAssignmentFromGrade:(UIStoryboardSegue *)segue
+{
+    // TODO
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // TODO
+    if (sender != self.gradeExamsButton) return;
+    
+    ImageReader *imageReader = new ImageReader();
+    NSString *imgToGradePath = [[NSBundle mainBundle] pathForResource:@"2" ofType:@"jpg"];
+    std::string *imgToGradePathString = new std::string([imgToGradePath UTF8String]);
+    std::vector< std::vector< float > > results = imageReader->readImage( *imgToGradePathString, 5, NO );
+    
+    NSLog(@"Graded!");
+    
 }
 
 #pragma mark OpenCV

@@ -137,7 +137,7 @@
     {
         [self.assignments addObject:newAssignment];
         [self.tableView reloadData];
-    }
+    } 
 }
 
 @end

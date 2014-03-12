@@ -12,6 +12,8 @@
 	<dict>
 		<key>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</key>
 		<string>ssh://github.com/nikkoschaff/GradesnapiOS.git</string>
+		<key>FA53F974-AD5C-4090-B285-721AF2BB41AD</key>
+		<string>ssh://github.com/nikkoschaff/gsimgproc</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Gradesnap.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</key>
 		<string>../..</string>
+		<key>FA53F974-AD5C-4090-B285-721AF2BB41AD</key>
+		<string>../../../../projects/gsimgproc</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/nikkoschaff/GradesnapiOS.git</string>
@@ -35,6 +39,14 @@
 			<string>BAD4B400-6012-47D3-B64B-6F3DD2AA6CAC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Gradesnap</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FA53F974-AD5C-4090-B285-721AF2BB41AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>gsimgproc</string>
 		</dict>
 	</array>
 </dict>
