@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */; };
-		7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */; };
-		7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */; };
-		7103548F18A531FC00AAAE7E /* GSPStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */; };
-		7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */; };
-		716A5FDC18C5146000796850 /* GSPSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 716A5FDB18C5146000796850 /* GSPSectionHeaderView.m */; };
-		716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.m */; };
-		716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.m */; };
+		7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.mm */; };
+		7103548218A3F9F800AAAE7E /* GSPStudentsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7103548118A3F9F800AAAE7E /* GSPStudentsViewController.mm */; };
+		7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.mm */; };
+		7103548F18A531FC00AAAE7E /* GSPStudentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7103548E18A531FC00AAAE7E /* GSPStudentViewController.mm */; };
+		7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.mm */; };
+		714FC71B18D076F600DAA2CB /* 2g.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC70A18D076F600DAA2CB /* 2g.jpg */; };
+		714FC71C18D076F600DAA2CB /* 2a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC70B18D076F600DAA2CB /* 2a.jpg */; };
+		714FC71D18D076F600DAA2CB /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC70C18D076F600DAA2CB /* 1.jpg */; };
+		714FC71E18D076F600DAA2CB /* 2b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC70D18D076F600DAA2CB /* 2b.jpg */; };
+		714FC71F18D076F600DAA2CB /* 2c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC70E18D076F600DAA2CB /* 2c.jpg */; };
+		714FC72018D076F600DAA2CB /* 2d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC70F18D076F600DAA2CB /* 2d.jpg */; };
+		714FC72118D076F600DAA2CB /* 2e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71018D076F600DAA2CB /* 2e.jpg */; };
+		714FC72218D076F600DAA2CB /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71118D076F600DAA2CB /* 3.jpg */; };
+		714FC72318D076F600DAA2CB /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71218D076F600DAA2CB /* 4.jpg */; };
+		714FC72418D076F600DAA2CB /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71318D076F600DAA2CB /* 5.jpg */; };
+		714FC72518D076F600DAA2CB /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71418D076F600DAA2CB /* 6.jpg */; };
+		714FC72618D076F600DAA2CB /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71518D076F600DAA2CB /* 7.jpg */; };
+		714FC72718D076F600DAA2CB /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71618D076F600DAA2CB /* 8.jpg */; };
+		714FC72818D076F600DAA2CB /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71718D076F600DAA2CB /* 2.jpg */; };
+		714FC72918D076F600DAA2CB /* ans.txt in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71818D076F600DAA2CB /* ans.txt */; };
+		714FC72A18D076F600DAA2CB /* img.txt in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71918D076F600DAA2CB /* img.txt */; };
+		714FC72B18D076F600DAA2CB /* 2f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC71A18D076F600DAA2CB /* 2f.jpg */; };
+		714FC72F18D07DAC00DAA2CB /* UIImageCVMatConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 714FC72E18D07DAC00DAA2CB /* UIImageCVMatConverter.mm */; };
+		716A5FDC18C5146000796850 /* GSPSectionHeaderView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 716A5FDB18C5146000796850 /* GSPSectionHeaderView.mm */; };
+		716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.mm */; };
+		716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.mm */; };
 		717B4DE418A28BD00069E770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE318A28BD00069E770 /* Foundation.framework */; };
 		717B4DE618A28BD00069E770 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE518A28BD00069E770 /* CoreGraphics.framework */; };
 		717B4DE818A28BD00069E770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE718A28BD00069E770 /* UIKit.framework */; };
 		717B4DEA18A28BD00069E770 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE918A28BD00069E770 /* CoreData.framework */; };
 		717B4DF018A28BD00069E770 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 717B4DEE18A28BD00069E770 /* InfoPlist.strings */; };
-		717B4DF218A28BD00069E770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DF118A28BD00069E770 /* main.m */; };
-		717B4DF618A28BD00069E770 /* GSPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DF518A28BD00069E770 /* GSPAppDelegate.m */; };
+		717B4DF218A28BD00069E770 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DF118A28BD00069E770 /* main.mm */; };
+		717B4DF618A28BD00069E770 /* GSPAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DF518A28BD00069E770 /* GSPAppDelegate.mm */; };
 		717B4DF918A28BD00069E770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717B4DF718A28BD00069E770 /* Main.storyboard */; };
 		717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */; };
 		717B4E0418A28BD00069E770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E0318A28BD00069E770 /* Images.xcassets */; };
@@ -30,14 +48,15 @@
 		717B4E0D18A28BD00069E770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE718A28BD00069E770 /* UIKit.framework */; };
 		717B4E0E18A28BD00069E770 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B4DE918A28BD00069E770 /* CoreData.framework */; };
 		717B4E1618A28BD00069E770 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E1418A28BD00069E770 /* InfoPlist.strings */; };
-		717B4E1818A28BD00069E770 /* GradesnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E1718A28BD00069E770 /* GradesnapTests.m */; };
-		717B4E2318A298D30069E770 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2218A298D30069E770 /* Course.m */; };
-		717B4E2918A2990F0069E770 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2818A2990F0069E770 /* Assignment.m */; };
-		717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2B18A299AD0069E770 /* AssignmentStudent.m */; };
-		717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */; };
-		717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */; };
-		718393A718ABBA9900225935 /* GSPNewAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */; };
-		718393AA18ABC9C400225935 /* GSPAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718393A918ABC9C400225935 /* GSPAssignmentViewController.m */; };
+		717B4E1818A28BD00069E770 /* GradesnapTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E1718A28BD00069E770 /* GradesnapTests.mm */; };
+		717B4E2318A298D30069E770 /* Course.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2218A298D30069E770 /* Course.mm */; };
+		717B4E2918A2990F0069E770 /* Assignment.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2818A2990F0069E770 /* Assignment.mm */; };
+		717B4E2C18A299AD0069E770 /* AssignmentStudent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2B18A299AD0069E770 /* AssignmentStudent.mm */; };
+		717B4E2F18A29B1C0069E770 /* GSPMasterViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E2E18A29B1C0069E770 /* GSPMasterViewController.mm */; };
+		717B4E3218A29E220069E770 /* GSPNewCourseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E3118A29E220069E770 /* GSPNewCourseViewController.mm */; };
+		718393A718ABBA9900225935 /* GSPNewAssignmentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 718393A618ABBA9900225935 /* GSPNewAssignmentViewController.mm */; };
+		718393AA18ABC9C400225935 /* GSPAssignmentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 718393A918ABC9C400225935 /* GSPAssignmentViewController.mm */; };
+		71E911C518CF50660001C75F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E911C218CF4F5D0001C75F /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,23 +71,42 @@
 
 /* Begin PBXFileReference section */
 		7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPCourseViewController.h; sourceTree = "<group>"; };
-		7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPCourseViewController.m; sourceTree = "<group>"; };
+		7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPCourseViewController.mm; sourceTree = "<group>"; };
 		7103548018A3F9F800AAAE7E /* GSPStudentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPStudentsViewController.h; sourceTree = "<group>"; };
-		7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPStudentsViewController.m; sourceTree = "<group>"; };
+		7103548118A3F9F800AAAE7E /* GSPStudentsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPStudentsViewController.mm; sourceTree = "<group>"; };
 		7103548318A3FE6000AAAE7E /* GSPNewStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewStudentViewController.h; sourceTree = "<group>"; };
-		7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewStudentViewController.m; sourceTree = "<group>"; };
+		7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPNewStudentViewController.mm; sourceTree = "<group>"; };
 		7103548718A4058600AAAE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/Student.h; sourceTree = "<group>"; };
-		7103548918A4058600AAAE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/Student.m; sourceTree = "<group>"; };
+		7103548918A4058600AAAE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = Base; path = Base.lproj/Student.mm; sourceTree = "<group>"; };
 		7103548D18A531FC00AAAE7E /* GSPStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPStudentViewController.h; sourceTree = "<group>"; };
-		7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPStudentViewController.m; sourceTree = "<group>"; };
+		7103548E18A531FC00AAAE7E /* GSPStudentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPStudentViewController.mm; sourceTree = "<group>"; };
 		7103549018A5350E00AAAE7E /* GSPAssignmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAssignmentsViewController.h; sourceTree = "<group>"; };
-		7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPAssignmentsViewController.m; sourceTree = "<group>"; };
+		7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPAssignmentsViewController.mm; sourceTree = "<group>"; };
+		714FC70A18D076F600DAA2CB /* 2g.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2g.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2g.jpg"; sourceTree = "<group>"; };
+		714FC70B18D076F600DAA2CB /* 2a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2a.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2a.jpg"; sourceTree = "<group>"; };
+		714FC70C18D076F600DAA2CB /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/1.jpg"; sourceTree = "<group>"; };
+		714FC70D18D076F600DAA2CB /* 2b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2b.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2b.jpg"; sourceTree = "<group>"; };
+		714FC70E18D076F600DAA2CB /* 2c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2c.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2c.jpg"; sourceTree = "<group>"; };
+		714FC70F18D076F600DAA2CB /* 2d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2d.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2d.jpg"; sourceTree = "<group>"; };
+		714FC71018D076F600DAA2CB /* 2e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2e.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2e.jpg"; sourceTree = "<group>"; };
+		714FC71118D076F600DAA2CB /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/3.jpg"; sourceTree = "<group>"; };
+		714FC71218D076F600DAA2CB /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 4.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/4.jpg"; sourceTree = "<group>"; };
+		714FC71318D076F600DAA2CB /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 5.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/5.jpg"; sourceTree = "<group>"; };
+		714FC71418D076F600DAA2CB /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/6.jpg"; sourceTree = "<group>"; };
+		714FC71518D076F600DAA2CB /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 7.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/7.jpg"; sourceTree = "<group>"; };
+		714FC71618D076F600DAA2CB /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 8.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/8.jpg"; sourceTree = "<group>"; };
+		714FC71718D076F600DAA2CB /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2.jpg"; sourceTree = "<group>"; };
+		714FC71818D076F600DAA2CB /* ans.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ans.txt; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/ans.txt"; sourceTree = "<group>"; };
+		714FC71918D076F600DAA2CB /* img.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = img.txt; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/img.txt"; sourceTree = "<group>"; };
+		714FC71A18D076F600DAA2CB /* 2f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2f.jpg; path = "../../../Dropbox/GradeSnap Stuff/Images1/Cameras/iPhone 3GS/2f.jpg"; sourceTree = "<group>"; };
+		714FC72D18D07DAC00DAA2CB /* UIImageCVMatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageCVMatConverter.h; sourceTree = "<group>"; };
+		714FC72E18D07DAC00DAA2CB /* UIImageCVMatConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UIImageCVMatConverter.mm; sourceTree = "<group>"; };
 		716A5FDA18C5146000796850 /* GSPSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPSectionHeaderView.h; sourceTree = "<group>"; };
-		716A5FDB18C5146000796850 /* GSPSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPSectionHeaderView.m; sourceTree = "<group>"; };
+		716A5FDB18C5146000796850 /* GSPSectionHeaderView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPSectionHeaderView.mm; sourceTree = "<group>"; };
 		716B1E6A18AC038E00556762 /* GSPNewAnswerKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewAnswerKeyViewController.h; sourceTree = "<group>"; };
-		716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewAnswerKeyViewController.m; sourceTree = "<group>"; };
+		716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPNewAnswerKeyViewController.mm; sourceTree = "<group>"; };
 		716B1E6D18AC15D900556762 /* GSPAnswerKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAnswerKeyCell.h; sourceTree = "<group>"; };
-		716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPAnswerKeyCell.m; sourceTree = "<group>"; };
+		716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPAnswerKeyCell.mm; sourceTree = "<group>"; };
 		717B4DE018A28BD00069E770 /* Gradesnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gradesnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B4DE318A28BD00069E770 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		717B4DE518A28BD00069E770 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,10 +114,10 @@
 		717B4DE918A28BD00069E770 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		717B4DED18A28BD00069E770 /* Gradesnap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gradesnap-Info.plist"; sourceTree = "<group>"; };
 		717B4DEF18A28BD00069E770 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		717B4DF118A28BD00069E770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		717B4DF118A28BD00069E770 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		717B4DF318A28BD00069E770 /* Gradesnap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gradesnap-Prefix.pch"; sourceTree = "<group>"; };
 		717B4DF418A28BD00069E770 /* GSPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPAppDelegate.h; sourceTree = "<group>"; };
-		717B4DF518A28BD00069E770 /* GSPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSPAppDelegate.m; sourceTree = "<group>"; };
+		717B4DF518A28BD00069E770 /* GSPAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPAppDelegate.mm; sourceTree = "<group>"; };
 		717B4DF818A28BD00069E770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		717B4DFB18A28BD00069E770 /* Gradesnap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gradesnap.xcdatamodel; sourceTree = "<group>"; };
 		717B4E0318A28BD00069E770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -87,21 +125,22 @@
 		717B4E0A18A28BD00069E770 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		717B4E1318A28BD00069E770 /* GradesnapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GradesnapTests-Info.plist"; sourceTree = "<group>"; };
 		717B4E1518A28BD00069E770 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		717B4E1718A28BD00069E770 /* GradesnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradesnapTests.m; sourceTree = "<group>"; };
+		717B4E1718A28BD00069E770 /* GradesnapTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GradesnapTests.mm; sourceTree = "<group>"; };
 		717B4E2118A298D30069E770 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
-		717B4E2218A298D30069E770 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		717B4E2218A298D30069E770 /* Course.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Course.mm; sourceTree = "<group>"; };
 		717B4E2718A2990F0069E770 /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
-		717B4E2818A2990F0069E770 /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
+		717B4E2818A2990F0069E770 /* Assignment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Assignment.mm; sourceTree = "<group>"; };
 		717B4E2A18A299AD0069E770 /* AssignmentStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentStudent.h; sourceTree = "<group>"; };
-		717B4E2B18A299AD0069E770 /* AssignmentStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentStudent.m; sourceTree = "<group>"; };
+		717B4E2B18A299AD0069E770 /* AssignmentStudent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AssignmentStudent.mm; sourceTree = "<group>"; };
 		717B4E2D18A29B1C0069E770 /* GSPMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPMasterViewController.h; sourceTree = "<group>"; };
-		717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPMasterViewController.m; sourceTree = "<group>"; };
+		717B4E2E18A29B1C0069E770 /* GSPMasterViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPMasterViewController.mm; sourceTree = "<group>"; };
 		717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewCourseViewController.h; sourceTree = "<group>"; };
-		717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewCourseViewController.m; sourceTree = "<group>"; };
+		717B4E3118A29E220069E770 /* GSPNewCourseViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPNewCourseViewController.mm; sourceTree = "<group>"; };
 		718393A518ABBA9900225935 /* GSPNewAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewAssignmentViewController.h; sourceTree = "<group>"; };
-		718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPNewAssignmentViewController.m; sourceTree = "<group>"; };
+		718393A618ABBA9900225935 /* GSPNewAssignmentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPNewAssignmentViewController.mm; sourceTree = "<group>"; };
 		718393A818ABC9C400225935 /* GSPAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAssignmentViewController.h; sourceTree = "<group>"; };
-		718393A918ABC9C400225935 /* GSPAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPAssignmentViewController.m; sourceTree = "<group>"; };
+		718393A918ABC9C400225935 /* GSPAssignmentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPAssignmentViewController.mm; sourceTree = "<group>"; };
+		71E911C218CF4F5D0001C75F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../Downloads/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E911C518CF50660001C75F /* opencv2.framework in Frameworks */,
 				717B4DE618A28BD00069E770 /* CoreGraphics.framework in Frameworks */,
 				717B4DEA18A28BD00069E770 /* CoreData.framework in Frameworks */,
 				717B4DE818A28BD00069E770 /* UIKit.framework in Frameworks */,
@@ -134,13 +174,13 @@
 			isa = PBXGroup;
 			children = (
 				717B4E2D18A29B1C0069E770 /* GSPMasterViewController.h */,
-				717B4E2E18A29B1C0069E770 /* GSPMasterViewController.m */,
+				717B4E2E18A29B1C0069E770 /* GSPMasterViewController.mm */,
 				7103547D18A3ECEB00AAAE7E /* GSPCourseViewController.h */,
-				7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.m */,
+				7103547E18A3ECEB00AAAE7E /* GSPCourseViewController.mm */,
 				717B4E3018A29E220069E770 /* GSPNewCourseViewController.h */,
-				717B4E3118A29E220069E770 /* GSPNewCourseViewController.m */,
+				717B4E3118A29E220069E770 /* GSPNewCourseViewController.mm */,
 				717B4E2118A298D30069E770 /* Course.h */,
-				717B4E2218A298D30069E770 /* Course.m */,
+				717B4E2218A298D30069E770 /* Course.mm */,
 			);
 			name = Course;
 			sourceTree = "<group>";
@@ -149,13 +189,13 @@
 			isa = PBXGroup;
 			children = (
 				717B4E2718A2990F0069E770 /* Assignment.h */,
-				717B4E2818A2990F0069E770 /* Assignment.m */,
+				717B4E2818A2990F0069E770 /* Assignment.mm */,
 				7103549018A5350E00AAAE7E /* GSPAssignmentsViewController.h */,
-				7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.m */,
+				7103549118A5350E00AAAE7E /* GSPAssignmentsViewController.mm */,
 				718393A518ABBA9900225935 /* GSPNewAssignmentViewController.h */,
-				718393A618ABBA9900225935 /* GSPNewAssignmentViewController.m */,
+				718393A618ABBA9900225935 /* GSPNewAssignmentViewController.mm */,
 				718393A818ABC9C400225935 /* GSPAssignmentViewController.h */,
-				718393A918ABC9C400225935 /* GSPAssignmentViewController.m */,
+				718393A918ABC9C400225935 /* GSPAssignmentViewController.mm */,
 			);
 			name = Assignment;
 			sourceTree = "<group>";
@@ -164,26 +204,59 @@
 			isa = PBXGroup;
 			children = (
 				7103548018A3F9F800AAAE7E /* GSPStudentsViewController.h */,
-				7103548118A3F9F800AAAE7E /* GSPStudentsViewController.m */,
+				7103548118A3F9F800AAAE7E /* GSPStudentsViewController.mm */,
 				7103548318A3FE6000AAAE7E /* GSPNewStudentViewController.h */,
-				7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.m */,
+				7103548418A3FE6000AAAE7E /* GSPNewStudentViewController.mm */,
 				7103548618A4058600AAAE7E /* Student.h */,
-				7103548818A4058600AAAE7E /* Student.m */,
+				7103548818A4058600AAAE7E /* Student.mm */,
 				7103548D18A531FC00AAAE7E /* GSPStudentViewController.h */,
-				7103548E18A531FC00AAAE7E /* GSPStudentViewController.m */,
+				7103548E18A531FC00AAAE7E /* GSPStudentViewController.mm */,
 			);
 			name = Student;
+			sourceTree = "<group>";
+		};
+		714FC70918D076C000DAA2CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				714FC70A18D076F600DAA2CB /* 2g.jpg */,
+				714FC70B18D076F600DAA2CB /* 2a.jpg */,
+				714FC70C18D076F600DAA2CB /* 1.jpg */,
+				714FC70D18D076F600DAA2CB /* 2b.jpg */,
+				714FC70E18D076F600DAA2CB /* 2c.jpg */,
+				714FC70F18D076F600DAA2CB /* 2d.jpg */,
+				714FC71018D076F600DAA2CB /* 2e.jpg */,
+				714FC71118D076F600DAA2CB /* 3.jpg */,
+				714FC71218D076F600DAA2CB /* 4.jpg */,
+				714FC71318D076F600DAA2CB /* 5.jpg */,
+				714FC71418D076F600DAA2CB /* 6.jpg */,
+				714FC71518D076F600DAA2CB /* 7.jpg */,
+				714FC71618D076F600DAA2CB /* 8.jpg */,
+				714FC71718D076F600DAA2CB /* 2.jpg */,
+				714FC71818D076F600DAA2CB /* ans.txt */,
+				714FC71918D076F600DAA2CB /* img.txt */,
+				714FC71A18D076F600DAA2CB /* 2f.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		714FC72C18D07D9700DAA2CB /* Image Processing */ = {
+			isa = PBXGroup;
+			children = (
+				714FC72D18D07DAC00DAA2CB /* UIImageCVMatConverter.h */,
+				714FC72E18D07DAC00DAA2CB /* UIImageCVMatConverter.mm */,
+			);
+			name = "Image Processing";
 			sourceTree = "<group>";
 		};
 		716B1E7018AC15E600556762 /* Answer Key */ = {
 			isa = PBXGroup;
 			children = (
 				716B1E6A18AC038E00556762 /* GSPNewAnswerKeyViewController.h */,
-				716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.m */,
+				716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.mm */,
 				716B1E6D18AC15D900556762 /* GSPAnswerKeyCell.h */,
-				716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.m */,
+				716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.mm */,
 				716A5FDA18C5146000796850 /* GSPSectionHeaderView.h */,
-				716A5FDB18C5146000796850 /* GSPSectionHeaderView.m */,
+				716A5FDB18C5146000796850 /* GSPSectionHeaderView.mm */,
 			);
 			name = "Answer Key";
 			sourceTree = "<group>";
@@ -210,6 +283,7 @@
 		717B4DE218A28BD00069E770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71E911C218CF4F5D0001C75F /* opencv2.framework */,
 				717B4DE318A28BD00069E770 /* Foundation.framework */,
 				717B4DE518A28BD00069E770 /* CoreGraphics.framework */,
 				717B4DE718A28BD00069E770 /* UIKit.framework */,
@@ -222,14 +296,16 @@
 		717B4DEB18A28BD00069E770 /* Gradesnap */ = {
 			isa = PBXGroup;
 			children = (
+				714FC72C18D07D9700DAA2CB /* Image Processing */,
+				714FC70918D076C000DAA2CB /* Resources */,
 				717B4DF418A28BD00069E770 /* GSPAppDelegate.h */,
-				717B4DF518A28BD00069E770 /* GSPAppDelegate.m */,
+				717B4DF518A28BD00069E770 /* GSPAppDelegate.mm */,
 				717B4DF718A28BD00069E770 /* Main.storyboard */,
 				7103548A18A531C900AAAE7E /* Course */,
 				717B4E0318A28BD00069E770 /* Images.xcassets */,
 				717B4DFA18A28BD00069E770 /* Gradesnap.xcdatamodeld */,
 				717B4E2A18A299AD0069E770 /* AssignmentStudent.h */,
-				717B4E2B18A299AD0069E770 /* AssignmentStudent.m */,
+				717B4E2B18A299AD0069E770 /* AssignmentStudent.mm */,
 				7103548B18A531D400AAAE7E /* Assignment */,
 				717B4DEC18A28BD00069E770 /* Supporting Files */,
 				7103548C18A531E800AAAE7E /* Student */,
@@ -243,7 +319,7 @@
 			children = (
 				717B4DED18A28BD00069E770 /* Gradesnap-Info.plist */,
 				717B4DEE18A28BD00069E770 /* InfoPlist.strings */,
-				717B4DF118A28BD00069E770 /* main.m */,
+				717B4DF118A28BD00069E770 /* main.mm */,
 				717B4DF318A28BD00069E770 /* Gradesnap-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -252,7 +328,7 @@
 		717B4E1118A28BD00069E770 /* GradesnapTests */ = {
 			isa = PBXGroup;
 			children = (
-				717B4E1718A28BD00069E770 /* GradesnapTests.m */,
+				717B4E1718A28BD00069E770 /* GradesnapTests.mm */,
 				717B4E1218A28BD00069E770 /* Supporting Files */,
 			);
 			path = GradesnapTests;
@@ -344,8 +420,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714FC72518D076F600DAA2CB /* 6.jpg in Resources */,
+				714FC72318D076F600DAA2CB /* 4.jpg in Resources */,
+				714FC72218D076F600DAA2CB /* 3.jpg in Resources */,
+				714FC72118D076F600DAA2CB /* 2e.jpg in Resources */,
+				714FC71C18D076F600DAA2CB /* 2a.jpg in Resources */,
+				714FC72B18D076F600DAA2CB /* 2f.jpg in Resources */,
+				714FC72818D076F600DAA2CB /* 2.jpg in Resources */,
+				714FC72018D076F600DAA2CB /* 2d.jpg in Resources */,
 				717B4E0418A28BD00069E770 /* Images.xcassets in Resources */,
+				714FC71F18D076F600DAA2CB /* 2c.jpg in Resources */,
+				714FC72918D076F600DAA2CB /* ans.txt in Resources */,
+				714FC72A18D076F600DAA2CB /* img.txt in Resources */,
+				714FC72418D076F600DAA2CB /* 5.jpg in Resources */,
 				717B4DF018A28BD00069E770 /* InfoPlist.strings in Resources */,
+				714FC71D18D076F600DAA2CB /* 1.jpg in Resources */,
+				714FC71E18D076F600DAA2CB /* 2b.jpg in Resources */,
+				714FC72718D076F600DAA2CB /* 8.jpg in Resources */,
+				714FC72618D076F600DAA2CB /* 7.jpg in Resources */,
+				714FC71B18D076F600DAA2CB /* 2g.jpg in Resources */,
 				717B4DF918A28BD00069E770 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,24 +458,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7103548218A3F9F800AAAE7E /* GSPStudentsViewController.m in Sources */,
-				716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.m in Sources */,
-				718393AA18ABC9C400225935 /* GSPAssignmentViewController.m in Sources */,
-				7103548F18A531FC00AAAE7E /* GSPStudentViewController.m in Sources */,
-				717B4E2C18A299AD0069E770 /* AssignmentStudent.m in Sources */,
-				7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.m in Sources */,
-				717B4E2F18A29B1C0069E770 /* GSPMasterViewController.m in Sources */,
-				717B4E2318A298D30069E770 /* Course.m in Sources */,
-				717B4E3218A29E220069E770 /* GSPNewCourseViewController.m in Sources */,
-				717B4DF218A28BD00069E770 /* main.m in Sources */,
-				716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.m in Sources */,
-				718393A718ABBA9900225935 /* GSPNewAssignmentViewController.m in Sources */,
-				716A5FDC18C5146000796850 /* GSPSectionHeaderView.m in Sources */,
-				7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.m in Sources */,
+				7103548218A3F9F800AAAE7E /* GSPStudentsViewController.mm in Sources */,
+				716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.mm in Sources */,
+				718393AA18ABC9C400225935 /* GSPAssignmentViewController.mm in Sources */,
+				7103548F18A531FC00AAAE7E /* GSPStudentViewController.mm in Sources */,
+				717B4E2C18A299AD0069E770 /* AssignmentStudent.mm in Sources */,
+				7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.mm in Sources */,
+				717B4E2F18A29B1C0069E770 /* GSPMasterViewController.mm in Sources */,
+				714FC72F18D07DAC00DAA2CB /* UIImageCVMatConverter.mm in Sources */,
+				717B4E2318A298D30069E770 /* Course.mm in Sources */,
+				717B4E3218A29E220069E770 /* GSPNewCourseViewController.mm in Sources */,
+				717B4DF218A28BD00069E770 /* main.mm in Sources */,
+				716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.mm in Sources */,
+				718393A718ABBA9900225935 /* GSPNewAssignmentViewController.mm in Sources */,
+				716A5FDC18C5146000796850 /* GSPSectionHeaderView.mm in Sources */,
+				7103547F18A3ECEB00AAAE7E /* GSPCourseViewController.mm in Sources */,
 				717B4DFC18A28BD00069E770 /* Gradesnap.xcdatamodeld in Sources */,
-				7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.m in Sources */,
-				717B4E2918A2990F0069E770 /* Assignment.m in Sources */,
-				717B4DF618A28BD00069E770 /* GSPAppDelegate.m in Sources */,
+				7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.mm in Sources */,
+				717B4E2918A2990F0069E770 /* Assignment.mm in Sources */,
+				717B4DF618A28BD00069E770 /* GSPAppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				717B4E1818A28BD00069E770 /* GradesnapTests.m in Sources */,
+				717B4E1818A28BD00069E770 /* GradesnapTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +507,12 @@
 			name = Student.h;
 			sourceTree = "<group>";
 		};
-		7103548818A4058600AAAE7E /* Student.m */ = {
+		7103548818A4058600AAAE7E /* Student.mm */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7103548918A4058600AAAE7E /* Base */,
 			);
-			name = Student.m;
+			name = Student.mm;
 			sourceTree = "<group>";
 		};
 		717B4DEE18A28BD00069E770 /* InfoPlist.strings */ = {
@@ -525,6 +619,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/wjs2/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gradesnap/Gradesnap-Prefix.pch";
 				INFOPLIST_FILE = "Gradesnap/Gradesnap-Info.plist";
@@ -538,6 +636,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/wjs2/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gradesnap/Gradesnap-Prefix.pch";
 				INFOPLIST_FILE = "Gradesnap/Gradesnap-Info.plist";
