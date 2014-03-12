@@ -18,8 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *classAverageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
-@property (weak, nonatomic) IBOutlet UIImageView *testImageView;
-@property (weak, nonatomic) IBOutlet UIButton *gradeExamsButton;
+@property (weak, nonatomic) IBOutlet UIImageView *sampleImageView;
 @end
 
 @implementation GSPAssignmentViewController
@@ -44,11 +43,6 @@
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     self.dateLabel.text = [dateFormatter stringFromDate:self.assignment.date];
     
-    
-    // Opencv
-//    cv::Mat img = [UIImageCVMatConverter cvMatGrayFromUIImage:[UIImage imageNamed:@"1.jpg"]];
-//    UIImage *newImg = [self UIImageFromCVMat:img];
-    [self.testImageView setImage:[self UIImageFromCVMat:[UIImageCVMatConverter cvMatGrayFromUIImage:[UIImage imageNamed:@"1.jpg"]]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +68,50 @@
     NSLog(@"Graded!");
     
 }
+
+#pragma mark Photo Selection
+
+-(IBAction)gradeExamsButtonPressed:(id)sender
+{
+    NSLog(@"grade exam button pressed");
+    
+    ELCImagePickerController *imagePicker = [[ELCImagePickerController alloc] initImagePicker];
+    imagePicker.maximumImagesCount = 400;
+    imagePicker.returnsOriginalImage = YES;
+    imagePicker.imagePickerDelegate = self;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info
+{
+    if ([info count] == 0)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
+    
+    ImageReader *imageReader = new ImageReader();
+    NSMutableArray *answerKeyArray = (NSMutableArray*)[self.assignment.answers componentsSeparatedByString:@","];
+    [answerKeyArray removeLastObject];
+    
+    
+    UIImage *img = [[info objectAtIndex:0] valueForKey:@"UIImagePickerControllerOriginalImage"];
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"upload-image.tmp"];
+    NSData *imageData = UIImagePNGRepresentation(img);
+    [imageData writeToFile:path atomically:YES];
+    [self.sampleImageView setImage:[UIImage imageWithContentsOfFile:path]];
+    
+    std::string *imgToGradePathString = new std::string([path UTF8String]);
+    std::vector< std::vector< float > > results = imageReader->readImage( *imgToGradePathString, [answerKeyArray count], NO );
+    
+    [self dismissViewControllerAnimated:YES completion:nil];    
+}
+
+- (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark OpenCV
 

@@ -61,7 +61,7 @@
                                                         withReuseIdentifier:@"AnswerKeyHeaderView"
                                                             forIndexPath:indexPath];
     
-    headerView.questionNumberLabel.text = [[NSString alloc]initWithFormat:@"%li", indexPath.section + 1];
+    headerView.questionNumberLabel.text = [[NSString alloc]initWithFormat:@"%i", indexPath.section + 1];
     return headerView;
 }
 

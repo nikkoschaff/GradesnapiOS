@@ -9,7 +9,7 @@ using namespace std;
 using namespace cv;
 
 // Max threshold for brightness
-static const int MAX_BRIGHTNESS = 20;
+//static const int MAX_BRIGHTNESS = 20;
 
 static const int NUM_NAME_REGIONS = 17;
 
@@ -23,7 +23,7 @@ static const cv::Point2f mainLL = Point2f(88, 3214);
 static const cv::Point2f mainLR = Point2f(2436, 3214);
 
 // Minimum threshold of area for the frame
-static const int MAIN_FRAME_MIN_THRESH = 1000000;
+//static const int MAIN_FRAME_MIN_THRESH = 1000000;
 
 // Width of the base question box
 static const float MAIN_QBOX_WIDTH = 225.0f;
@@ -54,7 +54,7 @@ static const float MAIN_START_NBOX_Y_OFFSET = 433;
 // Offset by X from each NBOX on base image
 static const float MAIN_NBOX_X_OFFSET = 45.3f;
 // Offset by Y from each NBOX on base image
-static const float MAIN_NBOX_Y_OFFSET = 47;
+//static const float MAIN_NBOX_Y_OFFSET = 47;
 
 // Offset by X between first and MI on base image
 static const float MAIN_NBOX_FIRST2MI_X_OFFSET = 80;
@@ -67,14 +67,14 @@ static const int CALIB_RECT = 0;
 static const int ROTATION_BOX = 1;
 
 // Ratio values for rect accuracy
-static const float ACCURACY_MODIFIER = 1.05f;
-static const float CALIB_RATIO = .782594f;
+//static const float ACCURACY_MODIFIER = 1.05f;
+//static const float CALIB_RATIO = .782594f;
 static const float CALIB_RATIO_UPPER = .8217237f;
 static const float CALIB_RATIO_LOWER = .745327619f;
-static const float CALIB_RATIO_INV = 1.2778f;
+//static const float CALIB_RATIO_INV = 1.2778f;
 static const float CALIB_RATIO_INV_UPPER = 1.34169f;
 static const float CALIB_RATIO_INV_LOWER = 1.21695238f;
-static const float ROTATED_RATIO = 1; 
+//static const float ROTATED_RATIO = 1; 
 static const float ROTATED_RATIO_UPPER = 1.05f;
 static const float ROTATED_RATIO_LOWER = .95f;
 
@@ -547,8 +547,6 @@ void ImageReader::findNameLetterRegions( cv::Mat &examImage,
 	float currentY( firstNBoxY );
 	// Relative offset by X for each nbox
 	float relxoff = MAIN_NBOX_X_OFFSET * widthRatio;
-	// Relative offset by Y for each nbox
-	float relyoff = MAIN_NBOX_Y_OFFSET * heightRatio;
 	// Width of the qbox
 	float nboxWidth( MAIN_NBOX_WIDTH * widthRatio );
 	// Height of the qbox
@@ -593,7 +591,7 @@ float ImageReader::readNameLetter( cv::Mat &examImage,
 	cv::Rect &region, int refCols[27], float &boxArea,
 	float &qWidth ) {
 	//Set up a projection for each of the five possible letter choices
-	float letter;
+//	float letter;
 	//Set the ROI for the image copy
 	Mat letterROI = examImage( region );
 	// Number of dark spots in an image region

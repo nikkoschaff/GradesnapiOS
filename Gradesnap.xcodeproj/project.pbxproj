@@ -17,6 +17,16 @@
 		714FC73F18D0A86400DAA2CB /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC73C18D0A86400DAA2CB /* 1.jpg */; };
 		714FC74018D0A86400DAA2CB /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC73D18D0A86400DAA2CB /* 2.jpg */; };
 		714FC74118D0A86400DAA2CB /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714FC73E18D0A86400DAA2CB /* 3.jpg */; };
+		7160FDCE18D0B9EC00A41E76 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7160FDBD18D0B9EC00A41E76 /* ELCAlbumPickerController.m */; };
+		7160FDCF18D0B9EC00A41E76 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 7160FDBF18D0B9EC00A41E76 /* ELCAsset.m */; };
+		7160FDD018D0B9EC00A41E76 /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7160FDC118D0B9EC00A41E76 /* ELCAssetCell.m */; };
+		7160FDD118D0B9EC00A41E76 /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7160FDC518D0B9EC00A41E76 /* ELCAssetTablePicker.m */; };
+		7160FDD218D0B9EC00A41E76 /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7160FDC718D0B9EC00A41E76 /* ELCImagePickerController.m */; };
+		7160FDD318D0B9EC00A41E76 /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7160FDC918D0B9EC00A41E76 /* ELCAlbumPickerController.xib */; };
+		7160FDD418D0B9EC00A41E76 /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7160FDCA18D0B9EC00A41E76 /* ELCAssetPicker.xib */; };
+		7160FDD518D0B9EC00A41E76 /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7160FDCB18D0B9EC00A41E76 /* ELCAssetTablePicker.xib */; };
+		7160FDD618D0B9EC00A41E76 /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7160FDCC18D0B9EC00A41E76 /* Overlay.png */; };
+		7160FDD718D0B9EC00A41E76 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7160FDCD18D0B9EC00A41E76 /* Overlay@2x.png */; };
 		716A5FDC18C5146000796850 /* GSPSectionHeaderView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 716A5FDB18C5146000796850 /* GSPSectionHeaderView.mm */; };
 		716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6B18AC038E00556762 /* GSPNewAnswerKeyViewController.mm */; };
 		716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 716B1E6E18AC15D900556762 /* GSPAnswerKeyCell.mm */; };
@@ -77,6 +87,23 @@
 		714FC73C18D0A86400DAA2CB /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		714FC73D18D0A86400DAA2CB /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		714FC73E18D0A86400DAA2CB /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		7160FDBC18D0B9EC00A41E76 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
+		7160FDBD18D0B9EC00A41E76 /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
+		7160FDBE18D0B9EC00A41E76 /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
+		7160FDBF18D0B9EC00A41E76 /* ELCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAsset.m; sourceTree = "<group>"; };
+		7160FDC018D0B9EC00A41E76 /* ELCAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetCell.h; sourceTree = "<group>"; };
+		7160FDC118D0B9EC00A41E76 /* ELCAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetCell.m; sourceTree = "<group>"; };
+		7160FDC218D0B9EC00A41E76 /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
+		7160FDC318D0B9EC00A41E76 /* ELCAssetSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetSelectionDelegate.h; sourceTree = "<group>"; };
+		7160FDC418D0B9EC00A41E76 /* ELCAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetTablePicker.h; sourceTree = "<group>"; };
+		7160FDC518D0B9EC00A41E76 /* ELCAssetTablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetTablePicker.m; sourceTree = "<group>"; };
+		7160FDC618D0B9EC00A41E76 /* ELCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCImagePickerController.h; sourceTree = "<group>"; };
+		7160FDC718D0B9EC00A41E76 /* ELCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCImagePickerController.m; sourceTree = "<group>"; };
+		7160FDC918D0B9EC00A41E76 /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
+		7160FDCA18D0B9EC00A41E76 /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
+		7160FDCB18D0B9EC00A41E76 /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
+		7160FDCC18D0B9EC00A41E76 /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		7160FDCD18D0B9EC00A41E76 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		716A5FDA18C5146000796850 /* GSPSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPSectionHeaderView.h; sourceTree = "<group>"; };
 		716A5FDB18C5146000796850 /* GSPSectionHeaderView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPSectionHeaderView.mm; sourceTree = "<group>"; };
 		716B1E6A18AC038E00556762 /* GSPNewAnswerKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPNewAnswerKeyViewController.h; sourceTree = "<group>"; };
@@ -216,6 +243,38 @@
 			name = "Image Processing";
 			sourceTree = "<group>";
 		};
+		7160FDBB18D0B9EC00A41E76 /* ELCImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				7160FDBC18D0B9EC00A41E76 /* ELCAlbumPickerController.h */,
+				7160FDBD18D0B9EC00A41E76 /* ELCAlbumPickerController.m */,
+				7160FDBE18D0B9EC00A41E76 /* ELCAsset.h */,
+				7160FDBF18D0B9EC00A41E76 /* ELCAsset.m */,
+				7160FDC018D0B9EC00A41E76 /* ELCAssetCell.h */,
+				7160FDC118D0B9EC00A41E76 /* ELCAssetCell.m */,
+				7160FDC218D0B9EC00A41E76 /* ELCAssetPickerFilterDelegate.h */,
+				7160FDC318D0B9EC00A41E76 /* ELCAssetSelectionDelegate.h */,
+				7160FDC418D0B9EC00A41E76 /* ELCAssetTablePicker.h */,
+				7160FDC518D0B9EC00A41E76 /* ELCAssetTablePicker.m */,
+				7160FDC618D0B9EC00A41E76 /* ELCImagePickerController.h */,
+				7160FDC718D0B9EC00A41E76 /* ELCImagePickerController.m */,
+				7160FDC818D0B9EC00A41E76 /* Resources */,
+			);
+			path = ELCImagePicker;
+			sourceTree = "<group>";
+		};
+		7160FDC818D0B9EC00A41E76 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7160FDC918D0B9EC00A41E76 /* ELCAlbumPickerController.xib */,
+				7160FDCA18D0B9EC00A41E76 /* ELCAssetPicker.xib */,
+				7160FDCB18D0B9EC00A41E76 /* ELCAssetTablePicker.xib */,
+				7160FDCC18D0B9EC00A41E76 /* Overlay.png */,
+				7160FDCD18D0B9EC00A41E76 /* Overlay@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		716B1E7018AC15E600556762 /* Answer Key */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +323,7 @@
 		717B4DEB18A28BD00069E770 /* Gradesnap */ = {
 			isa = PBXGroup;
 			children = (
+				7160FDBB18D0B9EC00A41E76 /* ELCImagePicker */,
 				714FC72C18D07D9700DAA2CB /* Image Processing */,
 				714FC70918D076C000DAA2CB /* Resources */,
 				717B4DF418A28BD00069E770 /* GSPAppDelegate.h */,
@@ -356,7 +416,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GSP;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Gradesnap;
 				TargetAttributes = {
 					717B4E0818A28BD00069E770 = {
@@ -390,8 +450,13 @@
 			files = (
 				717B4E0418A28BD00069E770 /* Images.xcassets in Resources */,
 				714FC73F18D0A86400DAA2CB /* 1.jpg in Resources */,
+				7160FDD718D0B9EC00A41E76 /* Overlay@2x.png in Resources */,
 				714FC74018D0A86400DAA2CB /* 2.jpg in Resources */,
 				714FC74118D0A86400DAA2CB /* 3.jpg in Resources */,
+				7160FDD318D0B9EC00A41E76 /* ELCAlbumPickerController.xib in Resources */,
+				7160FDD418D0B9EC00A41E76 /* ELCAssetPicker.xib in Resources */,
+				7160FDD618D0B9EC00A41E76 /* Overlay.png in Resources */,
+				7160FDD518D0B9EC00A41E76 /* ELCAssetTablePicker.xib in Resources */,
 				717B4DF018A28BD00069E770 /* InfoPlist.strings in Resources */,
 				717B4DF918A28BD00069E770 /* Main.storyboard in Resources */,
 			);
@@ -412,18 +477,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7160FDCE18D0B9EC00A41E76 /* ELCAlbumPickerController.m in Sources */,
 				7103548218A3F9F800AAAE7E /* GSPStudentsViewController.mm in Sources */,
 				716B1E6F18AC15D900556762 /* GSPAnswerKeyCell.mm in Sources */,
 				718393AA18ABC9C400225935 /* GSPAssignmentViewController.mm in Sources */,
 				7103548F18A531FC00AAAE7E /* GSPStudentViewController.mm in Sources */,
+				7160FDD018D0B9EC00A41E76 /* ELCAssetCell.m in Sources */,
 				717B4E2C18A299AD0069E770 /* AssignmentStudent.mm in Sources */,
 				7103548518A3FE6000AAAE7E /* GSPNewStudentViewController.mm in Sources */,
+				7160FDD218D0B9EC00A41E76 /* ELCImagePickerController.m in Sources */,
 				71763AE318D0B0A60006D392 /* ImageReader.cpp in Sources */,
 				717B4E2F18A29B1C0069E770 /* GSPMasterViewController.mm in Sources */,
 				714FC73B18D0A59100DAA2CB /* GSPAssignmentGradeResultsViewController.mm in Sources */,
 				714FC72F18D07DAC00DAA2CB /* UIImageCVMatConverter.mm in Sources */,
 				717B4E2318A298D30069E770 /* Course.mm in Sources */,
 				717B4E3218A29E220069E770 /* GSPNewCourseViewController.mm in Sources */,
+				7160FDCF18D0B9EC00A41E76 /* ELCAsset.m in Sources */,
 				717B4DF218A28BD00069E770 /* main.mm in Sources */,
 				716B1E6C18AC038E00556762 /* GSPNewAnswerKeyViewController.mm in Sources */,
 				718393A718ABBA9900225935 /* GSPNewAssignmentViewController.mm in Sources */,
@@ -433,6 +502,7 @@
 				7103549218A5350E00AAAE7E /* GSPAssignmentsViewController.mm in Sources */,
 				717B4E2918A2990F0069E770 /* Assignment.mm in Sources */,
 				717B4DF618A28BD00069E770 /* GSPAppDelegate.mm in Sources */,
+				7160FDD118D0B9EC00A41E76 /* ELCAssetTablePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +572,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -541,7 +610,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -607,7 +675,6 @@
 		717B4E1F18A28BD00069E770 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gradesnap.app/Gradesnap";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -630,7 +697,6 @@
 		717B4E2018A28BD00069E770 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gradesnap.app/Gradesnap";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
