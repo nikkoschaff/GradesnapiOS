@@ -14,5 +14,6 @@
 @interface GSPAssignmentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property Assignment *assignment;
 @property Course *course;
+@property NSArray *studentAssignments;
 
 @end

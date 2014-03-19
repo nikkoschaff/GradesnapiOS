@@ -81,6 +81,21 @@
     [currentAssignments addObject:assignment];
     course.assignments = (NSSet*)currentAssignments;
     
+    // Set up AssignmentStudents
+    NSMutableSet *assignmentStudents = [NSMutableSet new];
+    for (Student *student in self.course.students)
+    {
+        AssignmentStudent *newAssignmentStudent = [NSEntityDescription
+                                                   insertNewObjectForEntityForName:@"AssignmentStudent"
+                                                   inManagedObjectContext:context];
+        newAssignmentStudent.assignment = assignment;
+        newAssignmentStudent.student = student;
+        [assignmentStudents addObject:newAssignmentStudent];
+    }
+    
+    NSSet *finalAssignmentStudents = [NSSet setWithSet:assignmentStudents];
+    self.assignment.assignmentStudents = finalAssignmentStudents;
+    
     if (![context save:&error])
     {
         NSLog(@"Error saving new Assignment: %@", [error localizedDescription]);

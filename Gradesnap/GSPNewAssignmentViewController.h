@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Assignment.h"
 #import "Course.h"
+#import "Student.h"
+#import "AssignmentStudent.h"
 #import "GSPNewAnswerKeyViewController.h"
 
 @interface GSPNewAssignmentViewController : UIViewController <UITextFieldDelegate>

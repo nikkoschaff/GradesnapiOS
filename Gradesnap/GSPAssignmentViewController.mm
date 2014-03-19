@@ -33,12 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.classAverageLabel.text = [NSString stringWithFormat:@"Class Average: %f",[self.assignment classAverage]];
+    self.classAverageLabel.text = [NSString stringWithFormat:@"Class Average: %f%%",[self.assignment classAverage]];
     self.navTitle.title = self.assignment.name;
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     self.dateLabel.text = [dateFormatter stringFromDate:self.assignment.date];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,16 +48,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // TODO
-
+    NSLog(@"preparing for segue");
     
 }
 
 - (IBAction)unwindToAssignmentFromAssignmentStudent:(UIStoryboardSegue *)segue
 {
     // TODO
+    NSLog(@"Unwinding from assignment student");
 }
-
-
 
 #pragma mark - Table view data source
 
@@ -76,7 +74,10 @@
 {
     static NSString *CellIdentifier = @"AssignmentStudentCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    // TODO
+
+        // TODO
+//    Student *student = [self.course.students objectAtIndex:indexPath.row];
+//    cell.textLabel.text = course.name;
     
     return cell;
 }
