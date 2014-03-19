@@ -10,7 +10,12 @@
 #import "AssignmentStudent.h"
 #import "Student.h"
 
-@interface GSPAssignmentStudentViewController : UIViewController
+#import <MobileCoreServices/MobileCoreServices.h>
+
+@interface GSPAssignmentStudentViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property AssignmentStudent *assignmentStudent;
--(IBAction)regradeButtonPressed:(id)sender;
+@property BOOL newMedia;
+- (IBAction)useCamera:(id)sender;
+//- (IBAction)useCameraRoll:(id)sender;
+-(IBAction)gradeButtonPressed:(id)sender;
 @end

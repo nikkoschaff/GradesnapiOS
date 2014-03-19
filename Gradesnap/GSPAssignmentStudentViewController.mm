@@ -8,15 +8,19 @@
 
 #import "GSPAssignmentStudentViewController.h"
 
+
 #import <opencv2/opencv.hpp>
 #import "UIImageCVMatConverter.h"
 #import "ImageReader.h"
+
+#import <MobileCoreServices/MobileCoreServices.h>
+
 
 @interface GSPAssignmentStudentViewController ()
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *regradeButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *gradeButton;
 @end
 
 @implementation GSPAssignmentStudentViewController
@@ -41,7 +45,7 @@
     self.gradeLabel.text = [NSString stringWithFormat:@"Grade: %@%%",self.assignmentStudent.grade];
     if (self.assignmentStudent.grade == [NSNumber numberWithInt:-1])
     {
-        NSLog(@"Ungraded assignment student!");
+        NSLog(@"Ungraded student!");
     }
 }
 
@@ -51,21 +55,68 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)regradeButtonPressed:(id)sender
+-(IBAction)gradeButtonPressed:(id)sender
 {
-    NSLog(@"regradepressed");
+    NSLog(@"Grade pressed");
+    [self useCamera:nil];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+- (void)useCamera:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera])
+    {
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType =
+        UIImagePickerControllerSourceTypeCamera;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        [self presentViewController:imagePicker
+                           animated:YES completion:nil];
+        _newMedia = YES;
+    }
 }
-*/
+
+
+#pragma mark UIImagePickerControllerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+        
+    if (_newMedia)
+        UIImageWriteToSavedPhotosAlbum(image,
+                                       self,
+                                       @selector(image:finishedSavingWithError:contextInfo:),
+                                       nil);
+}
+
+-(void)image:(UIImage *)image finishedSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Save failed"
+                              message: @"Failed to save image"
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    NSLog(@"Finished saving image");
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark OpenCV
 

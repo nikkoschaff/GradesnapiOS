@@ -422,9 +422,9 @@
                                                 <segue destination="Lj6-eE-aJr" kind="unwind" unwindAction="unwindToAssignmentFromAssignmentStudent:" id="gp4-IR-Ewo"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Regrade" id="dz2-ji-lf5">
+                                        <barButtonItem key="rightBarButtonItem" title="Grade" id="dz2-ji-lf5">
                                             <connections>
-                                                <action selector="regradeButtonPressed:" destination="P29-YW-jzn" id="qyw-xT-vaK"/>
+                                                <action selector="gradeButtonPressed:" destination="P29-YW-jzn" id="bfq-DH-ipP"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -442,9 +442,9 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="EQw-7l-018" id="21q-eR-bal"/>
+                        <outlet property="gradeButton" destination="dz2-ji-lf5" id="fbW-Al-WJF"/>
                         <outlet property="gradeLabel" destination="uFr-PH-TBd" id="NGT-j1-fAi"/>
                         <outlet property="navTitle" destination="BAN-XR-OS4" id="4Xw-zH-2tQ"/>
-                        <outlet property="regradeButton" destination="dz2-ji-lf5" id="OIk-1Z-9fe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbO-EC-hlW" userLabel="First Responder" sceneMemberID="firstResponder"/>

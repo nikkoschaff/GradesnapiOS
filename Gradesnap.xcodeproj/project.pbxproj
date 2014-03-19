@@ -45,6 +45,7 @@
 		718393AA18ABC9C400225935 /* GSPAssignmentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 718393A918ABC9C400225935 /* GSPAssignmentViewController.mm */; };
 		71E911C518CF50660001C75F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E911C218CF4F5D0001C75F /* opencv2.framework */; };
 		71F8CA6418D9FF1B007B9C7D /* GSPAssignmentStudentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71F8CA6318D9FF1B007B9C7D /* GSPAssignmentStudentViewController.mm */; };
+		71F8CA6918DA2300007B9C7D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F8CA6818DA2300007B9C7D /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		71E911C218CF4F5D0001C75F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../Downloads/opencv2.framework; sourceTree = "<group>"; };
 		71F8CA6218D9FF1B007B9C7D /* GSPAssignmentStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPAssignmentStudentViewController.h; sourceTree = "<group>"; };
 		71F8CA6318D9FF1B007B9C7D /* GSPAssignmentStudentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSPAssignmentStudentViewController.mm; sourceTree = "<group>"; };
+		71F8CA6818DA2300007B9C7D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F8CA6918DA2300007B9C7D /* MobileCoreServices.framework in Frameworks */,
 				71E911C518CF50660001C75F /* opencv2.framework in Frameworks */,
 				717B4DE618A28BD00069E770 /* CoreGraphics.framework in Frameworks */,
 				717B4DEA18A28BD00069E770 /* CoreData.framework in Frameworks */,
@@ -249,6 +252,7 @@
 		717B4DE218A28BD00069E770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71F8CA6818DA2300007B9C7D /* MobileCoreServices.framework */,
 				71E911C218CF4F5D0001C75F /* opencv2.framework */,
 				717B4DE318A28BD00069E770 /* Foundation.framework */,
 				717B4DE518A28BD00069E770 /* CoreGraphics.framework */,
