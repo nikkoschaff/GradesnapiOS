@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Assignment.h"
 #import "Course.h"
+#import "AssignmentStudent.h"
+#import "Student.h"
+#import "GSPAssignmentStudentViewController.h"
 
 
 @interface GSPAssignmentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property Assignment *assignment;
 @property Course *course;
-@property NSArray *studentAssignments;
-
+@property NSMutableArray *assignmentStudents;
 @end

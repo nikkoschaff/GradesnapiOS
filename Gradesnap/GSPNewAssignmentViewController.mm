@@ -90,6 +90,7 @@
                                                    inManagedObjectContext:context];
         newAssignmentStudent.assignment = assignment;
         newAssignmentStudent.student = student;
+        newAssignmentStudent.grade = [NSNumber numberWithInt:-1];
         [assignmentStudents addObject:newAssignmentStudent];
     }
     

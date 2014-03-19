@@ -9,6 +9,7 @@
 #import "GSPAssignmentViewController.h"
 
 @interface GSPAssignmentViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *classAverageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
@@ -18,6 +19,7 @@
 
 @synthesize assignment;
 @synthesize course;
+@synthesize assignmentStudents;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +34,18 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    self.assignmentStudents = (NSMutableArray*)[self.assignment.assignmentStudents allObjects];
+    
     self.classAverageLabel.text = [NSString stringWithFormat:@"Class Average: %f%%",[self.assignment classAverage]];
     self.navTitle.title = self.assignment.name;
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     self.dateLabel.text = [dateFormatter stringFromDate:self.assignment.date];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView reloadData];
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,17 +53,22 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // TODO
-    NSLog(@"preparing for segue");
-    
+    if ([segue.identifier isEqualToString:@"AssignmentToAssignmentStudent"])
+    {
+        // TODO get assignmentstudent from sender
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        [(GSPAssignmentStudentViewController*)[segue destinationViewController] setAssignmentStudent:[self.assignmentStudents objectAtIndex:[indexPath indexAtPosition:1]]];
+
+    }
 }
+
 
 - (IBAction)unwindToAssignmentFromAssignmentStudent:(UIStoryboardSegue *)segue
 {
     // TODO
-    NSLog(@"Unwinding from assignment student");
 }
 
 #pragma mark - Table view data source
@@ -67,7 +80,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.course.students count];
+    return [self.assignment.assignmentStudents count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,9 +88,18 @@
     static NSString *CellIdentifier = @"AssignmentStudentCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-        // TODO
-//    Student *student = [self.course.students objectAtIndex:indexPath.row];
-//    cell.textLabel.text = course.name;
+    AssignmentStudent *assignmentStudent = [self.assignmentStudents objectAtIndex:indexPath.row];
+    
+    NSString *gradeDetails = nil;
+    if ((int)assignmentStudent.grade == -1)
+    {
+        gradeDetails = @"(Ungraded)";
+    } else
+    {
+        gradeDetails = [NSString stringWithFormat:@"%@",assignmentStudent.grade];
+    }
+    NSString *cellText = [NSString stringWithFormat:@"%@ - %@",assignmentStudent.student.name,gradeDetails];
+    cell.textLabel.text = cellText;
     
     return cell;
 }

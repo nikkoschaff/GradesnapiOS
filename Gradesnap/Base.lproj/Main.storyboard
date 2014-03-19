@@ -392,6 +392,7 @@
                         <outlet property="classAverageLabel" destination="kVS-sH-8Dj" id="bwf-be-4vT"/>
                         <outlet property="dateLabel" destination="hUe-g3-PmR" id="vh2-qU-50h"/>
                         <outlet property="navTitle" destination="EZk-Sg-pYD" id="5cx-mm-JN4"/>
+                        <outlet property="tableView" destination="quT-5E-kSW" id="xpv-eV-MhL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3z-UD-g76" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,6 +442,8 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="EQw-7l-018" id="21q-eR-bal"/>
+                        <outlet property="gradeLabel" destination="uFr-PH-TBd" id="NGT-j1-fAi"/>
+                        <outlet property="navTitle" destination="BAN-XR-OS4" id="4Xw-zH-2tQ"/>
                         <outlet property="regradeButton" destination="dz2-ji-lf5" id="OIk-1Z-9fe"/>
                     </connections>
                 </viewController>
@@ -708,7 +711,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <segue destination="MTN-Q8-gUf" kind="unwind" unwindAction="unwindToCourse:" id="Tt9-tr-fRd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="rhY-7c-Xce">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rhY-7c-Xce">
                             <connections>
                                 <segue destination="EKy-zM-kqL" kind="modal" id="U7e-Bx-DzE"/>
                             </connections>

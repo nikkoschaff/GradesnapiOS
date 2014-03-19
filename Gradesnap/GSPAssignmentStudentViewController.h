@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AssignmentStudent.h"
+#import "Student.h"
 
 @interface GSPAssignmentStudentViewController : UIViewController
-
+@property AssignmentStudent *assignmentStudent;
 -(IBAction)regradeButtonPressed:(id)sender;
-
 @end

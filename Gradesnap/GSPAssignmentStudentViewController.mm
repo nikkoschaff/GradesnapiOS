@@ -13,11 +13,15 @@
 #import "ImageReader.h"
 
 @interface GSPAssignmentStudentViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *regradeButton;
 @end
 
 @implementation GSPAssignmentStudentViewController
+
+@synthesize assignmentStudent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +36,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navTitle.title = self.assignmentStudent.student.name;
+    self.gradeLabel.text = [NSString stringWithFormat:@"Grade: %@%%",self.assignmentStudent.grade];
+    if (self.assignmentStudent.grade == [NSNumber numberWithInt:-1])
+    {
+        NSLog(@"Ungraded assignment student!");
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +53,7 @@
 
 -(IBAction)regradeButtonPressed:(id)sender
 {
-    
+    NSLog(@"regradepressed");
 }
 
 /*
