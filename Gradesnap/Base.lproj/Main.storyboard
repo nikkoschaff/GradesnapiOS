@@ -343,7 +343,6 @@
                                                 <segue destination="kFO-VA-XRp" kind="unwind" identifier="AssignmentSegue" unwindAction="unwindToAssignments:" id="0Kq-ay-GuE"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="1Fw-T8-sUo"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
