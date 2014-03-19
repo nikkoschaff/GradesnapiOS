@@ -133,7 +133,7 @@
     GSPNewAssignmentViewController *source = [segue sourceViewController];
     Assignment *newAssignment = source.assignment;
         
-    if (newAssignment != nil && [segue.identifier isEqualToString:@"NewAssignmentSegue"])
+    if (newAssignment != nil && [segue.identifier isEqualToString:@"NewAssignmentSegueDone"])
     {
         [self.assignments addObject:newAssignment];
         [self.tableView reloadData];

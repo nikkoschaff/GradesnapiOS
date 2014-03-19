@@ -130,7 +130,7 @@
     GSPNewStudentViewController *source = [segue sourceViewController];
     Student *newStudent = source.student;
     
-    if (newStudent != nil && [segue.identifier isEqualToString:@"NewStudentSegue"])
+    if (newStudent != nil && [segue.identifier isEqualToString:@"NewStudentSegueDone"])
     {
         [self.students addObject:newStudent];
         [self.tableView reloadData];

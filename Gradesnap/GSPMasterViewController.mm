@@ -127,7 +127,7 @@
     GSPNewCourseViewController *source = [segue sourceViewController];
     Course *newCourse = source.course;
     
-    if (newCourse != nil && [segue.identifier isEqualToString:@"NewCourseSegue"])
+    if (newCourse != nil && [segue.identifier isEqualToString:@"NewCourseSegueDone"])
     {
         [self.courses addObject:newCourse];
         [self.tableView reloadData];
