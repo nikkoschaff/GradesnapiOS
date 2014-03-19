@@ -12,10 +12,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *classAverageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
-@property (weak, nonatomic) IBOutlet UIImageView *sampleImageView;
 @end
 
 @implementation GSPAssignmentViewController
+
+@synthesize assignment;
+@synthesize course;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,6 +56,34 @@
 - (IBAction)unwindToAssignmentFromAssignmentStudent:(UIStoryboardSegue *)segue
 {
     // TODO
+}
+
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.course.students count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"AssignmentStudentCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    // TODO
+    
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
 }
 
 @end

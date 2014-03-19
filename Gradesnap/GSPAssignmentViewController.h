@@ -11,7 +11,7 @@
 #import "Course.h"
 
 
-@interface GSPAssignmentViewController : UITableViewController
+@interface GSPAssignmentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property Assignment *assignment;
 @property Course *course;
 

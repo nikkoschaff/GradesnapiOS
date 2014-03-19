@@ -11,7 +11,6 @@
 @interface GSPAssignmentsViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
-
 @end
 
 @implementation GSPAssignmentsViewController

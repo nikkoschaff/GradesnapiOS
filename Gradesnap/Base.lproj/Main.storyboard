@@ -290,7 +290,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ioM-qK-l2B" kind="modal" identifier="AssignmentSegue" id="4yD-EZ-rd3"/>
+                                    <segue destination="ioM-qK-l2B" kind="modal" identifier="AssignmentSegue" id="L94-vO-9cT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -364,7 +364,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="V8r-6d-7Fx" detailTextLabel="4WO-ow-ABD" style="IBUITableViewCellStyleValue1" id="H5i-xV-D1e">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentStudentCell" textLabel="V8r-6d-7Fx" detailTextLabel="4WO-ow-ABD" style="IBUITableViewCellStyleValue1" id="H5i-xV-D1e">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H5i-xV-D1e" id="VZF-nK-PsG">
